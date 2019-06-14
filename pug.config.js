@@ -8,6 +8,6 @@ module.exports = {
         10000}`;
     }
 
-    return `${'.'}/${assetPath}`;
+    return `./${assetPath}`;
   },
 };
