@@ -25,8 +25,5 @@
     "sw:minify": "terser -o public/sw.js public/sw.js",
     "dev": "run-p serve \"build:** -- --watch\""
   },
-  "license": "ISC",
-  "dependencies": {
-    "clipboard": "^2.0.4"
-  }
+  "license": "ISC"
 }
