@@ -1,7 +1,7 @@
 {
-  "name": "kaisermann.me",
-  "version": "2.1.0",
-  "description": "My personal website",
+  "name": "copymoji.netlify.com",
+  "version": "1.0.0",
+  "description": "click copy emoji",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",
@@ -20,8 +20,8 @@
     "build:html": "pug src/*.pug -o public/ -O pug.config.js",
     "build:css": "postcss src/style.css --dir public/ -u cssnano --no-map --ext css",
     "build:prod": "cross-env NODE_ENV=production SITE_URL=kaisermann.me npm run build",
-    "serve": "sirv public/",
-    "dev": "run-p \"serve -- --dev\" \"build:css -- --watch\" \"build:html -- --watch\" \"build:js -- --watch\""
+    "serve": "sirv public/ --dev",
+    "dev": "run-p serve \"build:css -- --watch\" \"build:html -- --watch\" \"build:js -- --watch\""
   },
   "license": "ISC",
   "dependencies": {
