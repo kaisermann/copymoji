@@ -26,3 +26,11 @@ if (
 } else {
   document.addEventListener('DOMContentLoaded', init, false);
 }
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(null, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
