@@ -22,7 +22,7 @@ li { list-style-type: none; }
 
 ul {
   padding: 0;
-  column-count: 4;
+  column-count: 5;
 }
 
 li {
@@ -62,9 +62,14 @@ li {
   pointer-events: none;
 }
 
-@media (min-width: 1021px) {
+@media (min-width: 1281px) {
   html {
-    --font-size: 2.4vw;
+    --font-size: 1.0vw;
+  }
+}
+@media (max-width: 1280px) {
+  ul {
+    column-count: 4;
   }
 }
 
