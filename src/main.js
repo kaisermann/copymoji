@@ -28,9 +28,7 @@ if (
 }
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(null, function(err) {
-      console.log('ServiceWorker registration failed: ', err);
-    });
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
   });
 }

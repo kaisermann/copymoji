@@ -17,13 +17,13 @@
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
-    "build": "run-p build:html build:css build:js",
-    "build:js": "rollup -c",
+    "build": "cross-env NODE_ENV=production SITE_URL=kaisermann.me run-p build:*",
+    "build:js": "rollup -c && npm run sw:minify",
     "build:html": "pug src/*.pug -o public/ -O pug.config.js",
     "build:css": "postcss src/style.css --dir public/ -u cssnano --no-map --ext css",
-    "build:prod": "cross-env NODE_ENV=production SITE_URL=kaisermann.me npm run build",
     "serve": "sirv public/ --dev",
-    "dev": "run-p serve \"build:css -- --watch\" \"build:html -- --watch\" \"build:js -- --watch\""
+    "sw:minify": "terser -o public/sw.js public/sw.js",
+    "dev": "run-p serve \"build:** -- --watch\""
   },
   "license": "ISC",
   "dependencies": {
