@@ -12,8 +12,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   overflow-x: hidden;
   animation: turn-on 2s linear;
 }
@@ -35,7 +35,8 @@ li {
 .btn {
   padding: .8rem;
   border: none;
-  background-color: #fff;
+  background-color: #000;
+  color: inherit;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -45,24 +46,21 @@ li {
   color: #fff;
 }
 
-.btn:active  {
-  outline: 1px solid #fff;
-}
-
-.btn:active::before,
-.btn:hover::before {
-  content: '';
-  display: block;
+.btn:focus,
+.btn:hover,
+.btn:active { outline: 1px solid #fff; }
+.btn:focus { outline-offset: -4px; }
+.btn:active { outline-offset: -8px; }
+.btn:active::before {
+  content: 'COPIED';
   position: fixed;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: monospace;
+  font-size: 23vw;
   pointer-events: none;
 }
-
 
 @media (min-width: 1021px) {
   html {
