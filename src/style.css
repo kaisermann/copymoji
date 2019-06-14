@@ -12,8 +12,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   overflow-x: hidden;
   animation: turn-on 2s linear;
 }
@@ -21,18 +21,68 @@ body {
 li { list-style-type: none; }
 
 ul {
-  column-count: 3;
+  column-count: 4;
 }
 
 li {
   display: inline-block;
   width: 100%;
   padding: .8rem;
+  text-align: center;
 }
 
 .btn {
-  font-size: 1.2rem;
-  border: none;
   padding: .8rem;
+  border: none;
+  background-color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
+}
+
+.btn:hover  {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn:active  {
+  outline: 1px solid #fff;
+}
+
+.btn:active::before,
+.btn:hover::before {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit;
+  pointer-events: none;
+}
+
+
+@media (min-width: 1021px) {
+  html {
+    --font-size: 2.4vw;
+  }
+}
+
+@media (max-width: 1020px) {
+  ul {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    column-count: 1;
+  }
 }
