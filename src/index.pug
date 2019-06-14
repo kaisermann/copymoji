@@ -1,0 +1,7 @@
+extends layouts/base.pug
+
+block content
+  ul
+    each emoji in self.emojis
+      li
+        button.btn #{emoji}

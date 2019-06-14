@@ -1,0 +1,30 @@
+{
+  "name": "kaisermann.me",
+  "version": "2.1.0",
+  "description": "My personal website",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "rollup": "^1.15.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.2",
+    "rollup-plugin-terser": "^5.0.0",
+    "sirv-cli": "^0.4.4"
+  },
+  "scripts": {
+    "build": "run-p build:html build:css build:js",
+    "build:js": "rollup -c",
+    "build:html": "pug src/*.pug -o public/ -O pug.config.js",
+    "build:css": "postcss src/style.css --dir public/ -u cssnano --no-map --ext css",
+    "build:prod": "cross-env NODE_ENV=production SITE_URL=kaisermann.me npm run build",
+    "serve": "sirv public/",
+    "dev": "run-p \"serve -- --dev\" \"build:css -- --watch\" \"build:html -- --watch\" \"build:js -- --watch\""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "clipboard": "^2.0.4"
+  }
+}

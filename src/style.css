@@ -1,0 +1,38 @@
+*,:after,:before {
+  box-sizing: border-box;
+}
+
+html {
+  --font-size: 22px;
+  --line-height: 1.4;
+  font-family: monospace;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  animation: turn-on 2s linear;
+}
+
+li { list-style-type: none; }
+
+ul {
+  column-count: 3;
+}
+
+li {
+  display: inline-block;
+  width: 100%;
+  padding: .8rem;
+}
+
+.btn {
+  font-size: 1.2rem;
+  border: none;
+  padding: .8rem;
+  cursor: pointer;
+}
