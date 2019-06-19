@@ -33,12 +33,16 @@ li {
 }
 
 .btn {
+  display: inline-block;
   padding: .8rem;
   border: none;
+  width: max-content;
   background-color: #000;
   color: inherit;
+  font-family: Roboto,Helvetica neue,Helvetica,Arial,sans-serif;
   font-size: 1.2rem;
   text-align: center;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -65,7 +69,7 @@ li {
 
 @media (min-width: 1281px) {
   html {
-    --font-size: 1.0vw;
+    --font-size: 1.2vw;
   }
 }
 @media (max-width: 1280px) {
@@ -89,5 +93,9 @@ li {
 @media (max-width: 480px) {
   ul {
     column-count: 1;
+  }
+
+  .btn {
+    width: auto;
   }
 }
