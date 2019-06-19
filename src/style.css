@@ -11,14 +11,17 @@ html {
 }
 
 body {
-  overflow: auto;
   margin: 0;
   color: #fff;
   background-color: #000;
   text-align: center;
+  overflow-x: hidden;
 }
 
-li { list-style-type: none; }
+a {
+  color: #fff;
+  font-size: .8rem;
+}
 
 ul {
   display: block;
@@ -31,7 +34,36 @@ li {
   display: inline-block;
   width: 100%;
   padding: .8rem;
+  list-style-type: none;
 }
+
+.goto-recently { position: absolute; right: 1rem; top: 1rem; }
+.goto-main { position: absolute; left: 1rem; top: 1rem; }
+
+.goto-main,
+.goto-recently { transition: all .6s ease; }
+
+section {
+  padding-top: 2rem;
+  transition: all .6s ease;
+  left: 0;
+}
+
+#recently:target ~ #main,
+#recently:not(:target) {
+  position: absolute;
+  bottom: 100%;
+  left: -100vw;
+}
+
+#recently:target ~ #main,
+#recently:not(:target),
+#recently:not(:target) ~ .goto-main,
+#recently:target ~ .goto-recently {
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 .copy-btn {
   display: inline-block;
@@ -64,44 +96,6 @@ li {
   transform: translate(-50%,-50%);
   font-family: monospace;
   font-size: 23vw;
-  pointer-events: none;
-}
-
-a {
-  color: #fff;
-  font-size: .8rem;
-}
-
-.goto-recently {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-
-.goto-main {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-}
-
-.lists { margin-top: 2rem; }
-
-.recently, .main { position: relative; }
-
-.recently,
-.main,
-.goto-main,
-.goto-recently {
-  transition: all .6s ease;
-}
-#recently:target ~ .lists .main,
-#recently:not(:target) ~ .lists .recently,
-#recently:not(:target) ~ .goto-main,
-#recently:target ~ .goto-recently {
-  transform: translateX(-100vw);
-  visibility: hidden;
-  height: 0;
-  opacity: 0;
   pointer-events: none;
 }
 

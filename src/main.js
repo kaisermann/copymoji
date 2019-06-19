@@ -46,12 +46,9 @@ function updateRecentlyUsed() {
 }
 
 function init() {
-  recentlyList = document.querySelector('.recently');
+  recentlyList = document.querySelector('.recently-list');
 
   // fix for button:active on iOS
-  window.addEventListener('hashchange', () => {
-    setTimeout(() => window.scrollTo(0, 0), 100);
-  });
   document.addEventListener('touchstart', () => {}, false);
   document.body.addEventListener('click', e => {
     if (!e.target.classList.contains('copy-btn')) {
