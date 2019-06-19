@@ -1,4 +1,4 @@
-const MAX_RECENTLY_USED = 20;
+const MAX_RECENTLY_USED = 40;
 let recentlyList;
 
 function copyToClipboard(str) {
