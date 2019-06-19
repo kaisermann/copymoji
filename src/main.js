@@ -5,7 +5,7 @@ function copyToClipboard(str) {
   el.readOnly = true;
   el.style.position = 'absolute';
   el.style.left = '-9999px';
-  
+
   document.body.appendChild(el);
 
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
@@ -25,6 +25,8 @@ function copyToClipboard(str) {
 }
 
 function init() {
+  // fix for button:active on iOS
+  document.addEventListener('touchstart', function() {}, false);
   document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', e => {
       copyToClipboard(e.currentTarget.textContent);

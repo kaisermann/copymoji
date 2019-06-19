@@ -38,6 +38,7 @@ li {
   background-color: #000;
   color: inherit;
   font-size: 1.2rem;
+  text-align: center;
   cursor: pointer;
 }
 
