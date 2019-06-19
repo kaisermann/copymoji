@@ -1,10 +1,13 @@
 extends layouts/base.pug
 
 block content
-  ul#recently
-  ul#main
-    each emoji in self.emojis
-      li
-        button.copy-btn #{emoji}
+  #recently #[=' ']
+  #main #[=' ']
   a.goto-recently(href="#recently") recently
   a.goto-main(href="#main") list
+  .lists
+    ul.recently
+    ul.main
+      each emoji in self.emojis
+        li
+          button.copy-btn #{emoji}

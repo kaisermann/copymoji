@@ -11,8 +11,8 @@ html {
 }
 
 body {
+  overflow: auto;
   margin: 0;
-  overflow-x: hidden;
   color: #fff;
   background-color: #000;
   text-align: center;
@@ -23,7 +23,7 @@ li { list-style-type: none; }
 ul {
   display: block;
   margin: 0 0 .8rem;
-  padding: 4rem 0 0;
+  padding: 0;
   column-count: 5;
 }
 
@@ -84,13 +84,25 @@ a {
   top: 1rem;
 }
 
-#recently:not(:target) {
-  display: none;
+.lists { margin-top: 2rem; }
+
+.recently, .main { position: relative; }
+
+.recently,
+.main,
+.goto-main,
+.goto-recently {
+  transition: all .6s ease;
 }
+#recently:target ~ .lists .main,
+#recently:not(:target) ~ .lists .recently,
 #recently:not(:target) ~ .goto-main,
-#recently:target ~ .goto-recently { display: none; }
-#recently:target ~ #main {
-  display: none;
+#recently:target ~ .goto-recently {
+  transform: translateX(-100vw);
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (min-width: 1281px) {
