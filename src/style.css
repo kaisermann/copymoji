@@ -18,20 +18,12 @@ body {
   text-align: center;
 }
 
-h1 {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin: .8rem 0;
-  border-bottom: 1px dotted #fff;
-  user-select: none;
-}
-
 li { list-style-type: none; }
 
 ul {
+  display: block;
   margin: 0 0 .8rem;
-  padding: 0;
+  padding: 4rem 0 0;
   column-count: 5;
 }
 
@@ -41,7 +33,7 @@ li {
   padding: .8rem;
 }
 
-.btn {
+.copy-btn {
   display: inline-block;
   padding: .8rem;
   border: none;
@@ -54,17 +46,17 @@ li {
   cursor: pointer;
 }
 
-.btn:hover  {
+.copy-btn:hover  {
   background-color: #000;
   color: #fff;
 }
 
-.btn:focus,
-.btn:hover,
-.btn:active { outline: 1px solid #fff; }
-.btn:focus { outline-offset: -4px; }
-.btn:active { outline-offset: -8px; }
-.btn:active::before {
+.copy-btn:focus,
+.copy-btn:hover,
+.copy-btn:active { outline: 1px solid #fff; }
+.copy-btn:focus { outline-offset: -4px; }
+.copy-btn:active { outline-offset: -8px; }
+.copy-btn:active::before {
   content: 'COPIED';
   position: fixed;
   top: 50%;
@@ -73,6 +65,32 @@ li {
   font-family: monospace;
   font-size: 23vw;
   pointer-events: none;
+}
+
+a {
+  color: #fff;
+  font-size: .8rem;
+}
+
+.goto-recently {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.goto-main {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+#recently:not(:target) {
+  display: none;
+}
+#recently:not(:target) ~ .goto-main,
+#recently:target ~ .goto-recently { display: none; }
+#recently:target ~ #main {
+  display: none;
 }
 
 @media (min-width: 1281px) {
@@ -103,7 +121,7 @@ li {
     column-count: 1;
   }
 
-  .btn {
+  .copy-btn {
     width: auto;
   }
 }

@@ -12,10 +12,11 @@ export default {
   plugins: [
     resolve(),
     cjs(),
-    workbox({
-      /** @type {Object} no default */
-      workboxConfig: require('./workbox-config.js'),
-    }),
+    process.env.NODE_ENV === 'production' &&
+      workbox({
+        /** @type {Object} no default */
+        workboxConfig: require('./workbox-config.js'),
+      }),
     terser(),
   ],
 };

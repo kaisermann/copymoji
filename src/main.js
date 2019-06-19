@@ -1,3 +1,6 @@
+const MAX_RECENTLY_USED = 20;
+let recentlyList;
+
 function copyToClipboard(str) {
   const el = document.createElement('textarea');
   el.value = str;
@@ -24,14 +27,39 @@ function copyToClipboard(str) {
   document.body.removeChild(el);
 }
 
+function getRecentlyUsed() {
+  return JSON.parse(localStorage.getItem('recently')) || [];
+}
+
+function saveToRecentlyUsed(emoji) {
+  let recentlyUsed = getRecentlyUsed();
+  recentlyUsed = [
+    ...new Set([emoji, ...recentlyUsed.slice(0, MAX_RECENTLY_USED - 1)]),
+  ];
+  localStorage.setItem('recently', JSON.stringify(recentlyUsed));
+}
+
+function updateRecentlyUsed() {
+  recentlyList.innerHTML = getRecentlyUsed()
+    .map(emoji => `<li><button class="copy-btn">${emoji}</button></li>`)
+    .join('');
+}
+
 function init() {
+  recentlyList = document.querySelector('#recently');
+
   // fix for button:active on iOS
-  document.addEventListener('touchstart', function() {}, false);
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      copyToClipboard(e.currentTarget.textContent);
-    });
+  document.addEventListener('touchstart', () => {}, false);
+  document.body.addEventListener('click', e => {
+    if (!e.target.classList.contains('copy-btn')) {
+      return;
+    }
+    saveToRecentlyUsed(e.target.textContent);
+    copyToClipboard(e.target.textContent);
+    updateRecentlyUsed();
   });
+
+  updateRecentlyUsed();
 }
 
 if (
