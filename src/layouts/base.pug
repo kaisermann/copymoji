@@ -1,12 +1,15 @@
 doctype html
 html(lang='en')
   head
+    link(rel='preload', href=self.asset('style.css') as='style')
+
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content=self.description)
     meta(name="theme-color" content="#000")
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="mobile-web-app-capable" content="yes")
+
     meta(name='web_author', content='Christian Kaisermann <christian@kaisermann.me>')
     meta(property='og:locale', content='en_US')
     meta(property='og:type', content='website')
@@ -16,8 +19,9 @@ html(lang='en')
     meta(property='og:site_name', content=self.title)
     meta(property='og:image', content=self.asset('favicon.ico'))
 
-    link(rel='preload', href=self.asset('style.css') as='style')
+    link(rel='manifest', href=self.asset('manifest.json'))
     link(rel='shortcut icon', href=self.asset('favicon.ico'))
+
     link(rel='stylesheet', href=self.asset('style.css'))
 
     title #{self.title}
