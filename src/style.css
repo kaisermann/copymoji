@@ -12,15 +12,25 @@ html {
 
 body {
   margin: 0;
-  background-color: #000;
-  color: #fff;
   overflow-x: hidden;
-  animation: turn-on 2s linear;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: .8rem 0;
+  border-bottom: 1px dotted #fff;
+  user-select: none;
 }
 
 li { list-style-type: none; }
 
 ul {
+  margin: 0 0 .8rem;
   padding: 0;
   column-count: 5;
 }
@@ -29,7 +39,6 @@ li {
   display: inline-block;
   width: 100%;
   padding: .8rem;
-  text-align: center;
 }
 
 .btn {
@@ -41,7 +50,6 @@ li {
   color: inherit;
   font-family: Roboto,Helvetica neue,Helvetica,Arial,sans-serif;
   font-size: 1.2rem;
-  text-align: center;
   white-space: nowrap;
   cursor: pointer;
 }
