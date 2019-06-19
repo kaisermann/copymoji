@@ -1,6 +1,22 @@
 const MAX_RECENTLY_USED = 40;
 let recentlyList;
 
+function h(tag, props = {}, children) {
+  const el = document.createElement(tag.toUpperCase());
+
+  if (props) {
+    Object.keys(props).forEach(key => {
+      el[key] = props[key];
+    });
+  }
+
+  if (children) {
+    children.forEach(c => el.appendChild(c));
+  }
+
+  return el;
+}
+
 function copyToClipboard(str) {
   const el = document.createElement('textarea');
   el.value = str;
@@ -39,10 +55,24 @@ function saveToRecentlyUsed(emoji) {
   localStorage.setItem('recently', JSON.stringify(recentlyUsed));
 }
 
-function updateRecentlyUsed() {
-  recentlyList.innerHTML = getRecentlyUsed()
-    .map(emoji => `<li><button class="copy-btn">${emoji}</button></li>`)
-    .join('');
+function updateRecentlyUsedList() {
+  const recentlyBtns = recentlyList.childNodes;
+  const recentlyUsed = getRecentlyUsed();
+
+  // update button texts (create items if needed)
+  recentlyUsed.forEach((key, i) => {
+    let liEl = recentlyBtns[i];
+    if (!liEl) {
+      liEl = h('li', null, [h('button', { className: 'copy-btn' })]);
+      recentlyList.appendChild(liEl);
+    }
+    liEl.childNodes[0].textContent = key;
+  });
+
+  // remove extra items
+  while (recentlyBtns[recentlyUsed.length]) {
+    recentlyList.removeChild(recentlyBtns[recentlyUsed.length]);
+  }
 }
 
 function init() {
@@ -56,10 +86,10 @@ function init() {
     }
     saveToRecentlyUsed(e.target.textContent);
     copyToClipboard(e.target.textContent);
-    updateRecentlyUsed();
+    updateRecentlyUsedList();
   });
 
-  updateRecentlyUsed();
+  updateRecentlyUsedList();
 }
 
 if (
