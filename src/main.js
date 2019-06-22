@@ -1,3 +1,5 @@
+import initSwipe from './swipe.js';
+
 const MAX_RECENTLY_USED = 40;
 let recentlyList;
 
@@ -77,6 +79,7 @@ function updateRecentlyUsedList() {
 
 function init() {
   recentlyList = document.querySelector('.recently-list');
+  initSwipe();
 
   // fix for button:active on iOS
   document.addEventListener('touchstart', () => {}, false);
