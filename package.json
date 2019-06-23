@@ -12,13 +12,13 @@
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.2",
     "rollup-plugin-terser": "^5.0.0",
-    "rollup-plugin-workbox": "^2.0.0",
+    "rollup-plugin-workbox-build": "^0.2.0",
     "simple-sw-generator": "github:bobbylej/simple-sw-generator",
     "sirv-cli": "^0.4.4",
     "terser": "^4.0.0"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all --parallel build:* --sequential sw:minify",
+    "build": "cross-env NODE_ENV=production run-s build:html build:css build:js sw:minify",
     "build:js": "rollup -c",
     "build:html": "pug src/*.pug -o public/ -O pug.config.js",
     "build:css": "postcss src/style.css --dir public/ -u cssnano --no-map --ext css",
