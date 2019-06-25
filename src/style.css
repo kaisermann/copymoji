@@ -129,5 +129,7 @@ section {
 
   .copy-btn {
     width: auto;
+    white-space: initial;
   }
 }
+
