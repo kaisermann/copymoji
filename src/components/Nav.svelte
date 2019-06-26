@@ -3,20 +3,20 @@
 </script>
 
 <style>
-  .goto-recently {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
-  .goto-main {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
+  nav {
+    padding: 0 0.4rem;
+    text-align: right;
   }
 
-  .goto-main,
-  .goto-recently {
-    transition: all 0.6s ease;
+  .selected {
+    font-weight: bold;
+    text-decoration: none;
+    transform: scale(1.05);
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.8rem 0.4rem 0;
   }
 </style>
 
