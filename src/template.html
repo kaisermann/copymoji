@@ -24,11 +24,23 @@
 
 	%sapper.styles%
 
-	%sapper.head%
+  %sapper.head%
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142129878-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-75837777-4');
+  </script>
 </head>
 <body>
 	<div id="sapper">%sapper.html%</div>
 
 	%sapper.scripts%
+  <script
+    src="https://signature.kaisermann.me"
+    data-style="position: fixed; right: 0; background: #fff; color: #000;" async>
+  </script>
 </body>
 </html>
