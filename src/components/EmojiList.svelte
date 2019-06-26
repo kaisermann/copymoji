@@ -10,6 +10,8 @@
     margin: 0 0 0.8rem;
     padding: 2rem 0 0;
     column-count: 5;
+    text-align: center;
+    overflow: hidden;
   }
 
   li {
@@ -46,7 +48,7 @@
 <ul>
   {#each emojis as emoji}
     <li>
-      <CopyBtn>{emoji}</CopyBtn>
+      <CopyBtn><span class="emoji">{emoji}</span></CopyBtn>
     </li>
   {/each}
 </ul>
