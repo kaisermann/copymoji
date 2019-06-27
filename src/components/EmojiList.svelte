@@ -48,7 +48,7 @@
 <ul>
   {#each emojis as emoji}
     <li>
-      <CopyBtn><span class="emoji">{emoji}</span></CopyBtn>
+      <CopyBtn>{emoji}</CopyBtn>
     </li>
   {/each}
 </ul>

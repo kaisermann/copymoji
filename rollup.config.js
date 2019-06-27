@@ -14,9 +14,7 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-const preprocess = autoPreprocess({
-  postcss: true,
-});
+const preprocess = autoPreprocess();
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
