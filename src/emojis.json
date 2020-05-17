@@ -169,7 +169,7 @@
   },
   {
     "emoji": "(._.) ( l: ) ( .-. ) ( :l ) (._.)",
-    "tags": "roll,rolling,poker,movement"
+    "tags": "roll,rolling,poker,face,movement"
   },
   {
     "emoji": "༼ʘ̚ل͜ʘ̚༽",
@@ -177,11 +177,11 @@
   },
   {
     "emoji": "༼ ºل͟º ༼ ºل͟º ༼ ºل͟º ༽ ºل͟º ༽ ºل͟º ༽",
-    "tags": "nose,poker,inception,repeat"
+    "tags": "nose,poker,face,inception,repeat"
   },
   {
     "emoji": "┬┴┬┴┤(･_├┬┴┬┴",
-    "tags": "wall,spy,hidden,hide,poker,serious"
+    "tags": "wall,spy,hidden,hide,poker,face,serious"
   },
   {
     "emoji": "ᕙ(⇀‸↼‶)ᕗ",
@@ -197,11 +197,11 @@
   },
   {
     "emoji": "⚆ _ ⚆",
-    "tags": "poker"
+    "tags": "poker,face"
   },
   {
     "emoji": "(•_•) ( •_•)>⌐■-■ (⌐■_■)",
-    "tags": "sungless,sequence,poker,serious"
+    "tags": "sungless,sequence,poker,face,serious"
   },
   {
     "emoji": "(｡◕‿‿◕｡)",
@@ -209,7 +209,7 @@
   },
   {
     "emoji": "ಥ_ಥ",
-    "tags": "cry,poker,serious,eyebrow,frown"
+    "tags": "cry,poker,face,serious,eyebrow,frown"
   },
   {
     "emoji": "ヽ༼ຈل͜ຈ༽ﾉ",
@@ -269,7 +269,7 @@
   },
   {
     "emoji": "╚(ಠ_ಠ)=┐",
-    "tags": "dance,serious,poker,eyebrown,frown"
+    "tags": "dance,serious,poker,face,eyebrown,frown"
   },
   {
     "emoji": "(─‿‿─)",
@@ -313,7 +313,7 @@
   },
   {
     "emoji": "ლ,ᔑ•ﺪ͟͠•ᔐ.ლ",
-    "tags": "hair,poker,serious,hand"
+    "tags": "hair,poker,face,serious,hand"
   },
   {
     "emoji": "(´・ω・`)",
@@ -337,7 +337,7 @@
   },
   {
     "emoji": "ಠ_ಥ",
-    "tags": "cry,monocle,poker,serious,eyebrow,frown"
+    "tags": "cry,monocle,poker,face,serious,eyebrow,frown"
   },
   {
     "emoji": "(>ლ)",
@@ -361,7 +361,7 @@
   },
   {
     "emoji": "ರ_ರ",
-    "tags": "eyebrow,frown,poker,serious"
+    "tags": "eyebrow,frown,poker,face,serious"
   },
   {
     "emoji": "(▰˘◡˘▰)",
@@ -409,7 +409,7 @@
   },
   {
     "emoji": "≧☉_☉≦",
-    "tags": "totoro,cat,animal,mustache,poker,shocked"
+    "tags": "totoro,cat,animal,mustache,poker,face,shocked"
   },
   {
     "emoji": "☼.☼",
@@ -429,23 +429,15 @@
   },
   {
     "emoji": ">_>",
-    "tags": "poker,deadpan,serious,straight"
+    "tags": "poker,face,deadpan,serious,straight"
   },
   {
     "emoji": "(^̮^)",
     "tags": "happy,content"
   },
   {
-    "emoji": "(･.◤)",
-    "tags": ""
-  },
-  {
-    "emoji": "( ‘ ͡ . ͜ ʖ ͡ . )",
-    "tags": ""
-  },
-  {
     "emoji": "(ˆڡˆ)",
-    "tags": ""
+    "tags": "hungry,delicious,food,tongue,yummy,happy,content,satisfied"
   },
   {
     "emoji": "☜(°O°☜)",
@@ -457,11 +449,11 @@
   },
   {
     "emoji": "( ͜。 ͡ʖ ͜。)",
-    "tags": ""
+    "tags": "naughty"
   },
   {
     "emoji": "(⚆_⚆)",
-    "tags": "surprised,shocked,poker,embarrassed"
+    "tags": "surprised,shocked,poker,face,embarrassed"
   },
   {
     "emoji": "ϵ( ‘Θ’ )϶",
@@ -469,7 +461,7 @@
   },
   {
     "emoji": "( ͡°Ĺ̯ ͡° )",
-    "tags": ""
+    "tags": "suspicious,nose,confused,what"
   },
   {
     "emoji": "| (• ◡•)|",
@@ -481,35 +473,35 @@
   },
   {
     "emoji": "(/¯–‿･)/¯",
-    "tags": ""
+    "tags": "yeah,yes,happy,arms"
   },
   {
     "emoji": "☜༼ຈل͜ຈ☜༽",
-    "tags": ""
+    "tags": "point,pointing,hands,left,nose,smile,happy"
   },
   {
     "emoji": "(˚ㄥ_˚)",
-    "tags": ""
+    "tags": "poker,face,serious,chocked,surprised"
   },
   {
     "emoji": "(－‸ლ)",
-    "tags": ""
+    "tags": "face,palm,disappointed"
   },
   {
     "emoji": "( ͡⚆ ͜ʖ ͡⚆)",
-    "tags": ""
+    "tags": "naughty,smile"
   },
   {
     "emoji": "( ͡°_ʖ ͡°)",
-    "tags": ""
+    "tags": "serious,nose"
   },
   {
     "emoji": "( ͡o ͜ʖ ͡o)",
-    "tags": ""
+    "tags": "naughty,idea,nose,smile"
   },
   {
     "emoji": "♡°☆(ಠೆಒಠಿ)☆°♡",
-    "tags": ""
+    "tags": "heart,star,snout,cute,spark,magic"
   },
   {
     "emoji": "°ಠಿ●ಠಿ°",
@@ -517,19 +509,19 @@
   },
   {
     "emoji": "(ˊ̥̥̥̥̥ ³ ˋ̥̥̥̥̥)",
-    "tags": ""
+    "tags": "cry,kiss"
   },
   {
     "emoji": "( ͡ຈ╭͜ʖ╮͡ຈ )",
-    "tags": ""
+    "tags": "wise,mustache,naughty"
   },
   {
     "emoji": "( ͡ಠ ʖ̯ ͡ಠ)",
-    "tags": ""
+    "tags": "confused,nose,what"
   },
   {
     "emoji": "( ͡~ ͜ʖ ͡°)",
-    "tags": ""
+    "tags": "naughty,wink,nose,smil"
   },
   {
     "emoji": "ಥ‿ಥ",
@@ -537,11 +529,11 @@
   },
   {
     "emoji": "凸(｀0´)凸",
-    "tags": ""
+    "tags": "middle,finger,rage,angry"
   },
   {
     "emoji": "(*｀へ´*)",
-    "tags": ""
+    "tags": "angry,rage"
   },
   {
     "emoji": "(｡+･`ω･´)",
@@ -561,11 +553,11 @@
   },
   {
     "emoji": "(‡▼益▼)",
-    "tags": ""
+    "tags": "angry,rage"
   },
   {
     "emoji": "( ಠ ಠ )",
-    "tags": ""
+    "tags": "eyebrow,frown"
   },
   {
     "emoji": "(´･益･｀*)",
@@ -573,51 +565,43 @@
   },
   {
     "emoji": "(¬▂¬)",
-    "tags": ""
+    "tags": "disappointed,angry"
   },
   {
     "emoji": "(>_<)",
-    "tags": ""
+    "tags": "shy,sorry,embarassed"
   },
   {
     "emoji": "（＞д＜）",
-    "tags": ""
+    "tags": "shy,sorry,embarassed,cry"
   },
   {
     "emoji": "(◣_◢)",
     "tags": ""
   },
   {
-    "emoji": "凸ಠ益ಠ)凸",
-    "tags": ""
+    "emoji": "(凸ಠ益ಠ)凸",
+    "tags": "angry,middle,finger,eyebrow,frown"
   },
   {
     "emoji": "(ノಠ益ಠ)ノ",
-    "tags": ""
+    "tags": "throw,turn,angre,rage,confused,eyebrow,frown"
   },
   {
     "emoji": "(ಠ⌣ಠ)",
-    "tags": ""
+    "tags": "eyebrow,frown,smile"
   },
   {
     "emoji": "＼(〇O〇)／",
-    "tags": ""
-  },
-  {
-    "emoji": "ｏ( ><)o",
-    "tags": ""
+    "tags": "happy,celebrate,arms,happy,shocked"
   },
   {
     "emoji": "щ(ºДºщ)",
-    "tags": ""
-  },
-  {
-    "emoji": "ᶘ ᵒᴥᵒᶅ",
-    "tags": ""
+    "tags": "what,why,shocked,surprised"
   },
   {
     "emoji": "(^._.^)ﾉ",
-    "tags": ""
+    "tags": "poker,face,tap,pet"
   },
   {
     "emoji": "༼•̃͡ ɷ•̃͡༽",
@@ -633,11 +617,11 @@
   },
   {
     "emoji": "(✖╭╮✖)",
-    "tags": ""
+    "tags": "dead,ohno,sad,x"
   },
   {
     "emoji": "(+_+)",
-    "tags": ""
+    "tags": "stoke,woken,happy,excited"
   },
   {
     "emoji": "(´ヮ`)",
@@ -645,47 +629,43 @@
   },
   {
     "emoji": "(∩_∩)",
-    "tags": ""
+    "tags": "happy,content"
   },
   {
     "emoji": "(∩❛ڡ❛∩)",
-    "tags": ""
+    "tags": "delicious,hungry,satisfaction,tongue,content,happy"
   },
   {
     "emoji": "(◍•ᴗ•◍)❤",
-    "tags": ""
+    "tags": "happy,love,heart,blush,cheek"
   },
   {
     "emoji": "(◑‿◐)",
-    "tags": ""
+    "tags": "glimmer,happy,sideways,content"
   },
   {
     "emoji": "(❀◦‿◦)",
-    "tags": ""
+    "tags": "flower,happy,content"
   },
   {
     "emoji": "(✿◠‿◠)",
-    "tags": ""
+    "tags": "flower,happy,content"
   },
   {
     "emoji": "( ˘ ³˘)♥",
-    "tags": ""
+    "tags": "kiss,love,heart,eyes,closed"
   },
   {
     "emoji": ".·´¯`(>▂<)´¯`·.",
-    "tags": ""
-  },
-  {
-    "emoji": "＿〆(。。)",
-    "tags": ""
+    "tags": "cry,sad,embarassed"
   },
   {
     "emoji": "( ͡~ ͜ʖ ͡~)",
-    "tags": ""
+    "tags": "naughty,wave"
   },
   {
     "emoji": "(ง ͡ʘ ͜ʖ ͡ʘ)ง",
-    "tags": ""
+    "tags": "fight,strong,naughty,nose,smile,arms"
   },
   {
     "emoji": "( ͠° ͟ʖ ͡°)",
@@ -693,7 +673,7 @@
   },
   {
     "emoji": "ᕙ༼◕ل͜◕༽ᕗ",
-    "tags": ""
+    "tags": "strong,glimmer,happy,nose,smile,arms"
   },
   {
     "emoji": "┌(° ͜ʖ͡°)┘",
@@ -705,27 +685,23 @@
   },
   {
     "emoji": "¯\\(◉◡◔)/¯",
-    "tags": ""
+    "tags": "shrug,glimmer,smile,happy"
   },
   {
     "emoji": "(⁎❛ᴗ❛⁎)",
-    "tags": ""
+    "tags": "happy,blush,cheek"
   },
   {
     "emoji": "乁( ◔ ౪◔)ㄏ",
-    "tags": ""
+    "tags": "shrug,snout,glimmer"
   },
   {
     "emoji": "☞(ﾟヮﾟ)☜",
-    "tags": ""
+    "tags": "pointing,inwards,point,finger,me,hands"
   },
   {
     "emoji": "(☞ಠ_ಠ)☞",
-    "tags": "point,pointing,sideways,look,eyebrow,frown,serious,poker,hands"
-  },
-  {
-    "emoji": "( ͝סּ ͜ʖ͡סּ)",
-    "tags": ""
+    "tags": "point,pointing,sideways,look,eyebrow,frown,serious,poker,face,hands"
   },
   {
     "emoji": "ᕕ( ಠ‿ಠ)ᕗ",
@@ -749,7 +725,7 @@
   },
   {
     "emoji": "⊜_⊜",
-    "tags": "shocked,poker,serious"
+    "tags": "shocked,poker,face,serious"
   },
   {
     "emoji": "(つ◕ل͜◕)つ",
@@ -757,7 +733,7 @@
   },
   {
     "emoji": "(•_•)",
-    "tags": "poker,surprised,aware,ops"
+    "tags": "poker,face,surprised,aware,ops"
   },
   {
     "emoji": "(/ﾟДﾟ)/",
@@ -765,15 +741,15 @@
   },
   {
     "emoji": "-`д´-",
-    "tags": ""
+    "tags": "angry"
   },
   {
     "emoji": "((╬ಠิ﹏ಠิ))",
-    "tags": ""
+    "tags": "apprehensive,eyebrow,frown"
   },
   {
     "emoji": "(◡‿◡✿)",
-    "tags": ""
+    "tags": "content,happy,relax,flower"
   },
   {
     "emoji": "(*≧m≦*)",
@@ -781,11 +757,11 @@
   },
   {
     "emoji": "（；¬＿¬)",
-    "tags": ""
+    "tags": "angry,disappointed"
   },
   {
     "emoji": "(」゜ロ゜)」",
-    "tags": ""
+    "tags": "what,why,shout,arms"
   },
   {
     "emoji": "o(-`д´- ｡)",
@@ -805,7 +781,7 @@
   },
   {
     "emoji": "（*＾3＾）/～♡",
-    "tags": ""
+    "tags": "kiss,heart,wind,send"
   },
   {
     "emoji": "щ(ಠ益ಠщ)",
@@ -817,7 +793,7 @@
   },
   {
     "emoji": "ლ(ಠ_ಠლ)",
-    "tags": "eyebrow,frown,poker,serious,why,what"
+    "tags": "eyebrow,frown,poker,face,serious,why,what"
   },
   {
     "emoji": "ლ(ಠ益ಠ)ლ",
@@ -849,11 +825,11 @@
   },
   {
     "emoji": "ರ◡ರ",
-    "tags": ""
+    "tags": "eyebrow,frown,happy,smile"
   },
   {
     "emoji": "❣◕ ‿ ◕❣",
-    "tags": ""
+    "tags": "hert,smile,happy,glimmer,cute"
   },
   {
     "emoji": "(ง ͠ ͠° ل͜ °)ง",
@@ -873,7 +849,7 @@
   },
   {
     "emoji": "ಠಿ_ಠ",
-    "tags": ""
+    "tags": "what,eyebrow,frown,confused"
   },
   {
     "emoji": "φ(._.)",
@@ -941,11 +917,11 @@
   },
   {
     "emoji": "☜(ಠ_ಠ☜)",
-    "tags": "point,pointing,eyebrow,frown,poker,serious,left"
+    "tags": "point,pointing,eyebrow,frown,poker,face,serious,left"
   },
   {
     "emoji": "▨-▨¬ლ(•_•) (▨_▨¬)",
-    "tags": "sunglass,cool,poker,serious"
+    "tags": "sunglass,cool,poker,face,serious"
   },
   {
     "emoji": "ヽ༼ຈل͜ຈ༽ﾉ︵ ┻━┻",
@@ -1333,7 +1309,7 @@
   },
   {
     "emoji": "(┛ಠ_ಠ)┛彡┻━┻",
-    "tags": "turn,table,throw,frown,poker,eyebrow"
+    "tags": "turn,table,throw,frown,poker,face,eyebrow"
   },
   {
     "emoji": "┌(ﾟдﾟ)┘",
@@ -1489,7 +1465,7 @@
   },
   {
     "emoji": "Ծ_Ծ",
-    "tags": "what,eyebrow,frown,poker,serious"
+    "tags": "what,eyebrow,frown,poker,face,serious"
   },
   {
     "emoji": "(◕︵◕)",
