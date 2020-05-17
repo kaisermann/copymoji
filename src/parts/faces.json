@@ -1,0 +1,26 @@
+[
+  {
+    "leftFace": "(",
+    "rightFace": ")"
+  },
+  {
+    "leftFace": "{",
+    "rightFace": "}"
+  },
+  {
+    "leftFace": "[",
+    "rightFace": "]"
+  },
+  {
+    "leftFace": "|",
+    "rightFace": "|"
+  },
+  {
+    "leftFace": "ᶘ",
+    "rightFace": "ᶅ"
+  },
+  {
+    "leftFace": "༼",
+    "rightFace": "༽"
+  }
+]

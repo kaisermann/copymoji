@@ -528,10 +528,6 @@
     "tags": "cry,smile,proud"
   },
   {
-    "emoji": "凸(｀0´)凸",
-    "tags": "middle,finger,rage,angry"
-  },
-  {
     "emoji": "(*｀へ´*)",
     "tags": "angry,rage"
   },
@@ -578,10 +574,6 @@
   {
     "emoji": "(◣_◢)",
     "tags": ""
-  },
-  {
-    "emoji": "(凸ಠ益ಠ)凸",
-    "tags": "angry,middle,finger,eyebrow,frown"
   },
   {
     "emoji": "(ノಠ益ಠ)ノ",
@@ -776,10 +768,6 @@
     "tags": ""
   },
   {
-    "emoji": "m(_ _)m",
-    "tags": ""
-  },
-  {
     "emoji": "（*＾3＾）/～♡",
     "tags": "kiss,heart,wind,send"
   },
@@ -908,10 +896,6 @@
     "tags": ""
   },
   {
-    "emoji": "凸(⊙▂⊙✖ )",
-    "tags": ""
-  },
-  {
     "emoji": "<(_ _)>",
     "tags": ""
   },
@@ -976,10 +960,6 @@
     "tags": ""
   },
   {
-    "emoji": "ಠ_ರೃ",
-    "tags": ""
-  },
-  {
     "emoji": "(☞ ͡° ͜ʖ ͡°)☞",
     "tags": ""
   },
@@ -1001,10 +981,6 @@
   },
   {
     "emoji": "（ ^_^）o自自o（^_^ ）",
-    "tags": ""
-  },
-  {
-    "emoji": "φ(．．;)",
     "tags": ""
   },
   {
@@ -1172,10 +1148,6 @@
     "tags": ""
   },
   {
-    "emoji": "┌∩┐(ಠ_ಠ)┌∩┐",
-    "tags": "middle,finger,serious,eyebrow,frown"
-  },
-  {
     "emoji": "ヘ(￣ω￣ヘ)",
     "tags": ""
   },
@@ -1194,10 +1166,6 @@
   {
     "emoji": "ヽ༼ʘ̚ل͜ʘ̚༽ﾉ",
     "tags": ""
-  },
-  {
-    "emoji": "╭∩╮(︶︿︶)╭∩╮",
-    "tags": "middle,finger,serious"
   },
   {
     "emoji": "ᕕ(ᐛ)ᕗ",
@@ -1277,7 +1245,7 @@
   },
   {
     "emoji": "ಡ_ಡ",
-    "tags": ""
+    "tags": "cry,eyebrow,frown,serious"
   },
   {
     "emoji": "(ಠ,,,ಠ)",
@@ -1404,31 +1372,7 @@
     "tags": "serious,eyebrow,unhappy,sad,frown"
   },
   {
-    "emoji": "༼´◓ɷ◔`༽",
-    "tags": ""
-  },
-  {
-    "emoji": "ಥ⌣ಥ",
-    "tags": ""
-  },
-  {
-    "emoji": "॓_॔",
-    "tags": ""
-  },
-  {
-    "emoji": "{ಠಠ}_,,|,",
-    "tags": ""
-  },
-  {
     "emoji": "┌( ಠ_ಠ)┘",
-    "tags": ""
-  },
-  {
-    "emoji": "►_◄",
-    "tags": ""
-  },
-  {
-    "emoji": "¢‿¢",
     "tags": ""
   },
   {
@@ -1436,19 +1380,7 @@
     "tags": ""
   },
   {
-    "emoji": "〓D",
-    "tags": ""
-  },
-  {
     "emoji": "(●´ω｀●)",
-    "tags": ""
-  },
-  {
-    "emoji": "ൠ",
-    "tags": ""
-  },
-  {
-    "emoji": "٩(͡๏̯͡๏)۶",
     "tags": ""
   },
   {
@@ -1469,10 +1401,6 @@
   },
   {
     "emoji": "(◕︵◕)",
-    "tags": ""
-  },
-  {
-    "emoji": "﴾͡๏̯͡๏﴿ O’RLY?",
     "tags": ""
   },
   {
@@ -1516,10 +1444,6 @@
     "tags": ""
   },
   {
-    "emoji": "๏̯͡๏﴿",
-    "tags": ""
-  },
-  {
     "emoji": "⊙▃⊙",
     "tags": "shocked,surprise"
   },
@@ -1537,10 +1461,6 @@
   },
   {
     "emoji": "ヘ(￣ー￣ヘ)",
-    "tags": ""
-  },
-  {
-    "emoji": "༼ꉺ✺ꉺ༽",
     "tags": ""
   },
   {
