@@ -1,9 +1,11 @@
-*,:after,:before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
 html {
-  --font-size: 22px;
+  --font-size: 18px;
   --line-height: 1.4;
   font-family: monospace;
   font-size: var(--font-size);
@@ -19,7 +21,7 @@ body {
 
 a {
   color: #fff;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 li {

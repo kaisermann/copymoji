@@ -1,47 +1,13 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   import { recently } from '../stores.js';
+  import { copyToClipboard } from '../modules/copyToClipboard.js';
 
-  const MAX_RECENTLY_USED = 40;
-
-  function copyToClipboard(str) {
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.contentEditable = true;
-    el.readOnly = true;
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-
-    document.body.appendChild(el);
-
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-      const range = document.createRange();
-      range.selectNodeContents(el);
-
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      el.setSelectionRange(0, 999999);
-    } else {
-      el.select();
-    }
-
-    document.execCommand('copy');
-    document.body.removeChild(el);
-  }
-
-  function getRecentlyUsed() {
-    return JSON.parse(localStorage.getItem('recently')) || [];
-  }
-
-  function saveToRecentlyUsed(emoji) {
-    $recently = [
-      ...new Set([emoji, ...$recently.slice(0, MAX_RECENTLY_USED - 1)]),
-    ];
-  }
+  const dispatch = createEventDispatcher();
 
   function handleClick(e) {
     copyToClipboard(e.target.textContent);
-    saveToRecentlyUsed(e.target.textContent);
+    dispatch('copy', e);
   }
 </script>
 
@@ -69,13 +35,16 @@
   .copy-btn:active {
     outline: 1px solid #fff;
   }
+
   .copy-btn:focus {
     outline-offset: -4px;
   }
+
   .copy-btn:active {
     outline-offset: -8px;
   }
-  .copy-btn:active::before {
+
+  .copy-btn::before {
     content: 'COPIED';
     position: fixed;
     top: 50%;
@@ -84,6 +53,13 @@
     font-family: monospace;
     font-size: 23vw;
     pointer-events: none;
+    transition: visibility 0.2s ease;
+    visibility: hidden;
+  }
+
+  .copy-btn:active::before {
+    visibility: visible;
+    transition: none;
   }
 </style>
 

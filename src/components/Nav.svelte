@@ -1,11 +1,16 @@
 <script>
+  import Search from './Search.svelte';
   export let segment;
 </script>
 
 <style>
-  nav {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 0.4rem;
-    text-align: right;
+    top: 0;
+    left: 0;
   }
 
   .selected {
@@ -16,11 +21,11 @@
 
   a {
     display: inline-block;
-    padding: 0.8rem 0.4rem 0;
+    padding: 0.8rem 0.4rem;
   }
 </style>
 
-<template>
+<header>
   <nav>
     <a class="goto-main" class:selected={segment === undefined} href=".">
       home
@@ -32,4 +37,5 @@
       recently
     </a>
   </nav>
-</template>
+  <Search />
+</header>

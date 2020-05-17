@@ -11,3 +11,7 @@ if (is_browser) {
     localStorage.setItem('recently', JSON.stringify(value));
   });
 }
+
+
+export let searchQuery = writable('')
+export let searchElement = writable('')
