@@ -36,15 +36,9 @@
 
 <header>
   <nav>
-    <a class="goto-main" class:selected={segment === undefined} href=".">
-      home
-    </a>
-    <a
-      class="goto-recently"
-      class:selected={segment === 'recently'}
-      href="recently">
-      recently
-    </a>
+    <a class:selected={segment === undefined} href=".">home</a>
+    <a class:selected={segment === 'recently'} href="recently">recently</a>
+    <a class:selected={segment === 'creator'} href="creator">creator</a>
   </nav>
   <div class="search">
     <Search />

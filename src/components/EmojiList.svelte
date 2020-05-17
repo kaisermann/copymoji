@@ -1,7 +1,7 @@
 <script>
   import VirtualList from '@sveltejs/svelte-virtual-list';
 
-  import CopyBtn from './CopyButton.svelte';
+  import CopyButton from './CopyButton.svelte';
   import { searchQuery, searchElement, recently } from '../stores.js';
 
   const MAX_RECENTLY_USED = 40;
@@ -117,9 +117,7 @@
 <div class="wrapper">
   <VirtualList items={filteredEmojis} let:item={emoji} bind:start bind:end>
     <div class="item" data-tags={emoji.tags.join(', ')}>
-      <CopyBtn on:copy={() => handleCopy(emoji)}>
-        <span class="emoji">{emoji.emoji}</span>
-      </CopyBtn>
+      <CopyButton on:copy={() => handleCopy(emoji)}>{emoji.emoji}</CopyButton>
     </div>
   </VirtualList>
 </div>

@@ -1,171 +1,254 @@
 [
   {
     "leftOutsideArm": "¯\\_",
-    "rightOutsideArm": "_/¯"
+    "rightOutsideArm": "_/¯",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "¯\\",
-    "rightOutsideArm": "/¯"
+    "rightOutsideArm": "/¯",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "乁",
-    "rightOutsideArm": "ㄏ"
+    "rightOutsideArm": "ㄏ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "ง",
     "leftInsideArm": "ง",
-    "rightOutsideArm": "ง"
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "つ",
     "leftInsideArm": " つ",
-    "rightOutsideArm": "つ"
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "づ",
     "leftInsideArm": "づ",
-    "rightOutsideArm": "づ"
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "ﾉ",
     "leftInsideArm": "ﾉ",
-    "rightOutsideArm": "ﾉ"
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "☞",
     "leftInsideArm": "☞",
-    "rightOutsideArm": "☞"
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "☜",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
     "rightInsideArm": "☜"
   },
   {
     "leftOutsideArm": "☜",
-    "rightOutsideArm": "☞"
+    "rightOutsideArm": "☞",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "☞",
-    "rightOutsideArm": "☜"
+    "rightOutsideArm": "☜",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ლ",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
     "rightInsideArm": "ლ"
   },
   {
     "leftOutsideArm": "ᕕ",
-    "rightOutsideArm": "ᕗ"
+    "rightOutsideArm": "ᕗ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ヾ",
-    "rightOutsideArm": "ノ"
+    "rightOutsideArm": "ノ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ノ",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
     "rightInsideArm": "ノ"
   },
   {
     "leftOutsideArm": "",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
     "rightInsideArm": "ノ"
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "╯",
     "leftInsideArm": "╯",
-    "rightOutsideArm": "╯"
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "~",
     "leftInsideArm": "~",
-    "rightOutsideArm": "~"
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "〜",
     "leftInsideArm": "〜",
-    "rightOutsideArm": "〜"
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "~",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
     "rightInsideArm": "~"
   },
   {
     "leftOutsideArm": "~",
-    "rightOutsideArm": "~"
+    "rightOutsideArm": "~",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "\\ ",
-    "rightOutsideArm": " /"
+    "rightOutsideArm": " /",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "/",
     "leftInsideArm": "/",
-    "rightOutsideArm": "/"
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ᕙ",
-    "rightOutsideArm": "ᕗ"
+    "rightOutsideArm": "ᕗ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ᕦ",
-    "rightOutsideArm": "ᕤ"
+    "rightOutsideArm": "ᕤ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "୧",
-    "rightOutsideArm": "୨"
-  },
-  {
-    "leftOutsideArm": "┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻",
-    "rightOutsideArm": "ᕤ"
+    "rightOutsideArm": "୨",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ヽ",
-    "rightOutsideArm": "ﾉ"
+    "rightOutsideArm": "ﾉ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
-    "leftOutsideArm": "っ"
+    "leftOutsideArm": null,
+    "rightOutsideArm": "っ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": null,
     "leftInsideArm": "∩",
     "rightInsideArm": "∩"
   },
   {
-    "rightOutsideArm": "☝"
+    "leftOutsideArm": null,
+    "rightOutsideArm": "☝",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
-    "leftOutsideArm": "☝"
+    "leftOutsideArm": "☝",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "╚",
-    "rightOutsideArm": "=┐"
+    "rightOutsideArm": "=┐",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "╚",
-    "rightOutsideArm": "╝"
+    "rightOutsideArm": "╝",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ƪ",
-    "rightOutsideArm": "ʃ"
+    "rightOutsideArm": "ʃ",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "/¯",
     "leftInsideArm": "/¯",
-    "rightOutsideArm": "/¯"
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "＼",
-    "rightOutsideArm": "／"
+    "rightOutsideArm": "／",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ƪ",
-    "rightOutsideArm": "┐"
+    "rightOutsideArm": "┐",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "└",
-    "rightOutsideArm": "┐"
+    "rightOutsideArm": "┐",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "┌",
-    "rightOutsideArm": "┘"
+    "rightOutsideArm": "┘",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "ヘ",
+    "rightOutsideArm": null,
+    "leftInsideArm": null,
     "rightInsideArm": "ヘ"
   },
   {
+    "leftOutsideArm": null,
+    "rightOutsideArm": "」",
     "leftInsideArm": "」",
-    "rightOutsideArm": "」"
+    "rightInsideArm": null
   },
   {
     "leftOutsideArm": "┌",
-    "rightOutsideArm": "┐"
+    "rightOutsideArm": "┐",
+    "leftInsideArm": null,
+    "rightInsideArm": null
   }
 ]

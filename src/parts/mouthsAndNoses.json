@@ -1,98 +1,130 @@
 [
   {
-    "mouth": "◡"
+    "mouth": "◡",
+    "nose": null
   },
   {
-    "mouth": "‿"
+    "mouth": "‿",
+    "nose": null
   },
   {
-    "mouth": "ᴗ"
+    "mouth": "ᴗ",
+    "nose": null
   },
   {
-    "mouth": "⌣"
+    "mouth": "⌣",
+    "nose": null
   },
   {
-    "mouth": "_"
+    "mouth": "_",
+    "nose": null
   },
   {
-    "mouth": "＿"
+    "mouth": "＿",
+    "nose": null
   },
   {
-    "mouth": "ヮ"
+    "mouth": "ヮ",
+    "nose": null
   },
   {
+    "mouth": null,
     "nose": "౪"
   },
   {
+    "mouth": null,
     "nose": " ͜ʖ͡"
   },
   {
+    "mouth": null,
     "nose": "ل͜"
   },
   {
+    "mouth": null,
     "nose": "益"
   },
   {
-    "mouth": "д"
+    "mouth": "д",
+    "nose": null
   },
   {
-    "mouth": "﹏"
+    "mouth": "﹏",
+    "nose": null
   },
   {
+    "mouth": null,
     "nose": "▼"
   },
   {
-    "mouth": "-"
+    "mouth": "-",
+    "nose": null
   },
   {
+    "mouth": null,
     "nose": "ω"
   },
   {
+    "mouth": null,
     "nose": "ᴥ"
   },
   {
-    "mouth": "0"
+    "mouth": "0",
+    "nose": null
   },
   {
+    "mouth": null,
     "nose": "ｪ"
   },
   {
-    "mouth": "╭╮"
+    "mouth": "╭╮",
+    "nose": null
   },
   {
+    "mouth": null,
     "nose": "ʖ̫"
   },
   {
-    "mouth": "∩"
+    "mouth": "∩",
+    "nose": null
   },
   {
-    "mouth": "︿"
+    "mouth": "︿",
+    "nose": null
   },
   {
-    "mouth": "σ"
+    "mouth": "σ",
+    "nose": null
   },
   {
-    "mouth": "▂"
+    "mouth": "▂",
+    "nose": null
   },
   {
-    "mouth": "､"
+    "mouth": "､",
+    "nose": null
   },
   {
-    "mouth": "▄"
+    "mouth": "▄",
+    "nose": null
   },
   {
-    "mouth": "෴"
+    "mouth": "෴",
+    "nose": null
   },
   {
-    "mouth": "△"
+    "mouth": "△",
+    "nose": null
   },
   {
+    "mouth": null,
     "nose": ","
   },
   {
-    "mouths": "⌂"
+    "nose": null,
+    "mouth": "⌂"
   },
   {
+    "mouth": null,
     "nose": "ɷ"
   }
 ]
