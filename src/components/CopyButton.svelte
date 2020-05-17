@@ -19,7 +19,8 @@
     width: max-content;
     background-color: #000;
     color: inherit;
-    font-family: Roboto, Helvetica neue, Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial,
+      Helvetica, Verdana, sans-serif;
     font-size: 1.2rem;
     white-space: nowrap;
     cursor: pointer;
@@ -47,14 +48,20 @@
   .copy-btn::before {
     content: 'COPIED';
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     font-family: monospace;
     font-size: 23vw;
     pointer-events: none;
     transition: visibility 0.2s ease;
     visibility: hidden;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.45);
   }
 
   .copy-btn:active::before {

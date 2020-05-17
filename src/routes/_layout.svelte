@@ -8,6 +8,7 @@
   .wrapper {
     display: grid;
     grid-template-rows: auto 1fr;
+    grid-row-gap: 1rem;
     height: 100vh;
   }
 

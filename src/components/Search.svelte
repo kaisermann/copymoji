@@ -9,14 +9,14 @@
     border-bottom: 2px solid white;
     color: white;
     font-family: monospace;
-    font-size: 0.6rem;
-    padding: 0.2rem 0.5rem;
-    width: 8rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    width: 100%;
   }
 
   input:focus {
     outline: none;
-    border-bottom-width: 3px;
+    outline: 2px solid white;
   }
 </style>
 

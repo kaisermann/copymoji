@@ -69,7 +69,7 @@
   },
   {
     "emoji": "﴾͡๏̯͡๏﴿ O'RLY?",
-    "tags": "orly,really,chocked"
+    "tags": "orly,really,shocked"
   },
   {
     "emoji": "(ノಠ益ಠ)ノ彡┻━┻",
@@ -161,7 +161,7 @@
   },
   {
     "emoji": "◉_◉",
-    "tags": "chocked,surprise,trip,"
+    "tags": "shocked,surprise,trip,"
   },
   {
     "emoji": "\\ (•◡•) /",
@@ -237,7 +237,7 @@
   },
   {
     "emoji": "(｡◕‿◕｡)",
-    "tags": "cute,smile,blush,cheek"
+    "tags": "cute,blush,cheek,angry,shoutile,blush,cheek"
   },
   {
     "emoji": "（╯°□°）╯︵( .o.)",
@@ -289,11 +289,11 @@
   },
   {
     "emoji": "( ⚆ _ ⚆ )",
-    "tags": "chocked,attentious,aware,ops"
+    "tags": "shocked,attentious,aware,ops"
   },
   {
     "emoji": "(ʘᗩʘ')",
-    "tags": "chocked,surprised,what,er"
+    "tags": "shocked,surprised,what,er"
   },
   {
     "emoji": "☜(⌒▽⌒)☞",
@@ -397,7 +397,7 @@
   },
   {
     "emoji": "°Д°",
-    "tags": "chocked,surprise,what"
+    "tags": "shocked,surprise,what"
   },
   {
     "emoji": "( ﾟヮﾟ)",
@@ -409,7 +409,7 @@
   },
   {
     "emoji": "≧☉_☉≦",
-    "tags": "totoro,cat,animal,mustache,poker,chocked"
+    "tags": "totoro,cat,animal,mustache,poker,shocked"
   },
   {
     "emoji": "☼.☼",
@@ -461,7 +461,7 @@
   },
   {
     "emoji": "(⚆_⚆)",
-    "tags": "surprised,chocked,poker,embarrassed"
+    "tags": "surprised,shocked,poker,embarrassed"
   },
   {
     "emoji": "ϵ( ‘Θ’ )϶",
@@ -749,7 +749,7 @@
   },
   {
     "emoji": "⊜_⊜",
-    "tags": "chocked,poker,serious"
+    "tags": "shocked,poker,serious"
   },
   {
     "emoji": "(つ◕ل͜◕)つ",
@@ -789,11 +789,11 @@
   },
   {
     "emoji": "o(-`д´- ｡)",
-    "tags": ""
+    "tags": "blush,cheek,angry,shout"
   },
   {
     "emoji": "ヽ༼ ಠ益ಠ ༽ﾉ",
-    "tags": ""
+    "tags": "angry,arms,what,eyebrow,frown,confused"
   },
   {
     "emoji": "◎▼◎",
@@ -809,23 +809,23 @@
   },
   {
     "emoji": "щ(ಠ益ಠщ)",
-    "tags": ""
+    "tags": "why,what,eyebrow,frown,confused,shocked"
   },
   {
     "emoji": "щ(ಥДಥщ)",
-    "tags": ""
+    "tags": "cry,confused,eyebrow,frown,why,what,shocked"
   },
   {
     "emoji": "ლ(ಠ_ಠლ)",
-    "tags": ""
+    "tags": "eyebrow,frown,poker,serious,why,what"
   },
   {
     "emoji": "ლ(ಠ益ಠ)ლ",
-    "tags": ""
+    "tags": "eyebrow,frown,what,why,shocked"
   },
   {
     "emoji": "(⊙_◎)",
-    "tags": ""
+    "tags": "shocked,crazy,what"
   },
   {
     "emoji": "(´･_･`)",
@@ -1057,7 +1057,7 @@
   },
   {
     "emoji": "(☝’益’☝)",
-    "tags": ""
+    "tags": "hands,up,objection,finger"
   },
   {
     "emoji": "( ‾ʖ̫‾)",
@@ -1065,11 +1065,11 @@
   },
   {
     "emoji": "¯\\(◉‿◉)/¯",
-    "tags": ""
+    "tags": "shrug,smile"
   },
   {
     "emoji": "(ノಠ ∩ಠ)ノ彡( \\o°o)\\",
-    "tags": ""
+    "tags": "throw,turn,people,person"
   },
   {
     "emoji": "(；￣Д￣）",
@@ -1081,7 +1081,7 @@
   },
   {
     "emoji": "٩(^ᴗ^)۶",
-    "tags": ""
+    "tags": "happy,smile,content"
   },
   {
     "emoji": "m(._.)m",
@@ -1229,7 +1229,7 @@
   },
   {
     "emoji": "⊙.☉",
-    "tags": "impressed,chocked,surprised"
+    "tags": "impressed,shocked,surprised"
   },
   {
     "emoji": "ヽ( ≧ω≦)ﾉ",
@@ -1533,7 +1533,7 @@
   },
   {
     "emoji": "ಠ益ಠ",
-    "tags": ""
+    "tags": "eyebrow,frown,confused"
   },
   {
     "emoji": "(ﾟヮﾟ)",
@@ -1545,7 +1545,7 @@
   },
   {
     "emoji": "⊙▃⊙",
-    "tags": "chocked,surprise"
+    "tags": "shocked,surprise"
   },
   {
     "emoji": "ヾ(●ω●)ノ",

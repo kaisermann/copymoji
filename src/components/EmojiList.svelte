@@ -63,18 +63,60 @@
   .wrapper {
     height: 100%;
     overflow: hidden;
+    text-align: center;
   }
 
   .item {
-    text-align: center;
+    display: inline-block;
+    position: relative;
     margin: 0.2rem 0;
+    text-align: center;
+  }
+
+  .item::before {
+    content: attr(data-tags);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: max-content;
+    padding: 0 0.4rem;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s step-end;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+
+  .item:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 580px) {
+    .item::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: 581px) {
+    .item::before {
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(100% + 0.5rem);
+    }
   }
 </style>
 
 <!-- <p>{start}-{end}/{filteredEmojis.length} emojis</p> -->
 <div class="wrapper">
   <VirtualList items={filteredEmojis} let:item={emoji} bind:start bind:end>
-    <div class="item">
+    <div class="item" data-tags={emoji.tags.join(', ')}>
       <CopyBtn on:copy={() => handleCopy(emoji)}>
         <span class="emoji">{emoji.emoji}</span>
       </CopyBtn>
