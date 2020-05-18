@@ -33,3 +33,7 @@ li {
     --font-size: 1.2vw;
   }
 }
+
+*:focus {
+  outline: 1px solid white;
+}

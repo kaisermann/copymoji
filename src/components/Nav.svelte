@@ -21,7 +21,12 @@
     padding: 0.8rem 0.4rem;
   }
 
-  @media (min-width: 540px) {
+  @media (max-width: 540px) {
+    .search {
+      padding: 0 0.4rem;
+    }
+  }
+  @media (min-width: 541px) {
     header {
       display: flex;
       justify-content: space-between;

@@ -1,11 +1,10 @@
 <script>
   import { slide } from 'svelte/transition';
-  import { bounceInOut } from 'svelte/easing';
   import { createEventDispatcher } from 'svelte';
 
   const dispatch = createEventDispatcher();
 
-  let collapsed = true;
+  let collapsed = false;
 
   export let title = 'n/a';
   export let items = [];
@@ -20,11 +19,18 @@
     border: none;
     color: white;
     font-family: monospace;
+    text-align: left;
+    width: 100%;
+  }
+
+  .wrapper {
+    padding: 1px;
   }
 
   .title {
     font-size: 1.2rem;
     opacity: 0.8;
+    padding: 0.4rem;
   }
 
   .title:hover {
@@ -33,7 +39,9 @@
 
   ul {
     margin: 0;
-    padding-left: 1rem;
+    padding: 1px 1rem 1px 1px;
+    max-height: 27rem;
+    overflow: auto;
   }
 
   .select-button {
@@ -53,7 +61,7 @@
   </button>
 
   {#if collapsed === false}
-    <ul transition:slide={{ duration: 300, easing: bounceInOut }}>
+    <ul transition:slide={{ duration: 300 }}>
       {#each items as item}
         <li>
           <button

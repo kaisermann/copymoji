@@ -37,8 +37,10 @@
     return (currentCreation = mapCreation(currentCreation, ...parts));
   }
 
-  function formatCreation(creation) {
-    const parts = Object.entries(creation).map(([, val]) => val || '');
+  function formatCreation(creation, ...creationParts) {
+    const parts = Object.entries(mapCreation(creation, ...creationParts)).map(
+      ([, val]) => val || '',
+    );
     return parts.join('');
   }
 
@@ -47,30 +49,33 @@
 
 <style>
   .wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-
-  .parts {
-    flex-grow: 1;
-    padding-left: 2rem;
-  }
-
-  .creation-col {
-    width: 40%;
-    font-size: 2rem;
-  }
-
-  .formatted-creation {
-    padding: 0.2rem;
-    top: 50%;
-    position: sticky;
-    transform: translateY(-50%);
+    text-align: center;
   }
 
   .creation {
-    font-size: 3rem;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 0.2rem dashed white;
+  }
+
+  .parts {
+    margin: 4rem 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+  }
+
+  .created-emoji {
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+
+  @media (max-width: 640px) {
+    .parts {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 
@@ -79,6 +84,11 @@
 </svelte:head>
 
 <div class="wrapper">
+  <div class="creation">
+    <CopyButton>
+      <span class="created-emoji">{formattedCreation}</span>
+    </CopyButton>
+  </div>
   <div class="parts">
     <PartList
       title="heads"
@@ -87,6 +97,7 @@
       let:item>
       {formatCreation(mapCreation(currentCreation, item))}
     </PartList>
+
     <PartList
       title="eyes"
       items={eyes}
@@ -94,6 +105,7 @@
       let:item>
       {formatCreation(mapCreation(currentCreation, item))}
     </PartList>
+
     <PartList
       title="mouths/noses"
       items={mouthsAndNoses}
@@ -111,11 +123,4 @@
     </PartList>
   </div>
 
-  <div class="creation-col">
-    <div class="formatted-creation">
-      <CopyButton>
-        <span class="creation">{formattedCreation}</span>
-      </CopyButton>
-    </div>
-  </div>
 </div>
