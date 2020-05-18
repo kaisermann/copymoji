@@ -15,34 +15,7 @@
   .copy-btn {
     display: inline-block;
     padding: 0.8rem;
-    border: none;
-    width: max-content;
-    background-color: #000;
-    color: inherit;
-    font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial,
-      Helvetica, Verdana, sans-serif;
     font-size: 1.2rem;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-
-  .copy-btn:hover {
-    background-color: #000;
-    color: #fff;
-  }
-
-  .copy-btn:focus,
-  .copy-btn:hover,
-  .copy-btn:active {
-    outline: 1px solid #fff;
-  }
-
-  .copy-btn:focus {
-    outline-offset: -4px;
-  }
-
-  .copy-btn:active {
-    outline-offset: -8px;
   }
 
   .copy-btn::before {
@@ -70,6 +43,6 @@
   }
 </style>
 
-<button class="copy-btn" on:click={handleClick}>
+<button class="btn copy-btn" on:click={handleClick}>
   <slot />
 </button>

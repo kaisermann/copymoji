@@ -13,7 +13,6 @@
   .selected {
     font-weight: bold;
     text-decoration: none;
-    transform: scale(1.05);
   }
 
   a {
@@ -41,11 +40,17 @@
 
 <header>
   <nav>
-    <a class:selected={segment === undefined} href=".">home</a>
-    <a class:selected={segment === 'recently'} href="recently">recently</a>
-    <a class:selected={segment === 'creator'} href="creator">creator</a>
+    <a class="btn" class:selected={segment === undefined} href=".">home</a>
+    <a class="btn" class:selected={segment === 'recently'} href="recently">
+      recently
+    </a>
+    <a class="btn" class:selected={segment === 'creator'} href="creator">
+      creator
+    </a>
   </nav>
-  <div class="search">
-    <Search />
-  </div>
+  {#if segment == null || segment == 'recently'}
+    <div class="search">
+      <Search />
+    </div>
+  {/if}
 </header>

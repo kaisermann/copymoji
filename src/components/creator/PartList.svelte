@@ -11,6 +11,11 @@
 </script>
 
 <style>
+  .top {
+    display: flex;
+    align-items: center;
+  }
+
   button {
     cursor: pointer;
     -webkit-appearance: none;
@@ -20,7 +25,6 @@
     color: white;
     font-family: monospace;
     text-align: left;
-    width: 100%;
   }
 
   .wrapper {
@@ -28,7 +32,7 @@
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     opacity: 0.8;
     padding: 0.4rem;
   }
@@ -45,9 +49,10 @@
   }
 
   .select-button {
-    font-size: 1rem;
+    font-size: 1.4rem;
     opacity: 0.6;
-    padding: 0.4rem 0;
+    padding: 0.8rem;
+    width: 100%;
   }
 
   .select-button:hover {
@@ -56,16 +61,19 @@
 </style>
 
 <div class="wrapper">
-  <button class="title" on:click={() => (collapsed = !collapsed)}>
-    {title}
-  </button>
+  <div class="top">
+    <button class="btn title" on:click={() => (collapsed = !collapsed)}>
+      {title}
+    </button>
+    <slot name="controls" />
+  </div>
 
   {#if collapsed === false}
     <ul transition:slide={{ duration: 300 }}>
       {#each items as item}
         <li>
           <button
-            class="select-button"
+            class="btn select-button"
             on:click={() => dispatch('select', item)}>
             <slot {item} />
           </button>

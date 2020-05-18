@@ -37,3 +37,30 @@ li {
 *:focus {
   outline: 1px solid white;
 }
+
+.btn {
+  appearance: none;
+  -webkit-appearance: none;
+  width: max-content;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial,
+    Helvetica, Verdana, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:focus,
+.btn:hover,
+.btn:active {
+  outline: 1px solid #fff;
+}
+
+.btn:active {
+  outline-offset: -6px;
+}
