@@ -117,7 +117,7 @@
 <div class="wrapper">
   <VirtualList items={filteredEmojis} let:item={emoji} bind:start bind:end>
     <div class="item" data-tags={emoji.tags.join(', ')}>
-      <CopyButton on:copy={() => handleCopy(emoji)}>{emoji.emoji}</CopyButton>
+      <CopyButton content={emoji.emoji} on:copy={() => handleCopy(emoji)} />
     </div>
   </VirtualList>
 </div>

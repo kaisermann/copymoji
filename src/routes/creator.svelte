@@ -2,7 +2,6 @@
   import CopyButton from '../components/CopyButton.svelte';
   import EmojiList from '../components/EmojiList.svelte';
   import PartList from '../components/creator/PartList.svelte';
-  import ListControls from '../components/creator/ListControls.svelte';
   import { recently, getTitle } from '../stores.js';
   import CloseIcon from '../components/icons/Close.svelte';
   import * as Utils from '../components/creator/utils.js';
@@ -29,8 +28,15 @@
     text-align: center;
   }
 
+  .creation-section {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    padding: 1.5rem 0;
+    z-index: 2;
+  }
+
   .creation {
-    margin-top: 2rem;
     display: inline-block;
     font-size: 2rem;
     padding: 1rem;
@@ -59,10 +65,12 @@
 </svelte:head>
 
 <div class="wrapper">
-  <div class="creation">
-    <CopyButton>
-      <span class="created-emoji">{formattedCreation}</span>
-    </CopyButton>
+  <div class="creation-section">
+    <div class="creation">
+      <CopyButton content={formattedCreation} let:content>
+        <span class="created-emoji">{content}</span>
+      </CopyButton>
+    </div>
   </div>
 
   <div class="parts">

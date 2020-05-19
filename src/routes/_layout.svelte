@@ -13,7 +13,8 @@
   }
 
   main {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 </style>
 

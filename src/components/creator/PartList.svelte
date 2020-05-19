@@ -61,12 +61,22 @@
 
   .control-btn {
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 0;
     padding: 0.4rem;
     width: 40px;
     height: 40px;
     text-align: center;
+    font-weight: bold;
+  }
+
+  .control-btn.active {
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+  }
+  .control-btn:disabled {
+    opacity: 0.2;
   }
 
   ul {
@@ -113,26 +123,43 @@
 
   {#if collapsed === false}
     <ul transition:slide={{ duration: 300 }}>
-      {#each parts.list as item}
+      {#each parts.list as part}
         <li>
           <button
             title="select"
             class="btn select-button"
-            on:click={() => dispatch('select', Utils.assign(template, item))}>
-            {Utils.format(Utils.assign(template, item))}
+            on:click={() => dispatch('select', Utils.assign(template, part))}>
+            {Utils.format(Utils.assign(template, part))}
           </button>
+
           {#if sides}
             <div class="side-btns">
               <button
                 title="only add left side"
                 class="btn control-btn"
-                on:click={() => dispatch('select', Utils.assign(template, Utils.ignoreParts(item, rightProps)))}>
+                class:active={Utils.hasSpecificPart(template, part, leftProps)}
+                disabled={Utils.hasSideProps('left', part) === false}
+                on:click={() => {
+                  if (Utils.hasSpecificPart(template, part, leftProps)) {
+                    dispatch('clear', Utils.removeParts(template, leftProps));
+                  } else {
+                    dispatch('select', Utils.assign(template, Utils.ignoreParts(part, rightProps)));
+                  }
+                }}>
                 L
               </button>
               <button
                 title="only add right side"
                 class="btn control-btn"
-                on:click={() => dispatch('select', Utils.assign(template, Utils.ignoreParts(item, leftProps)))}>
+                class:active={Utils.hasSpecificPart(template, part, rightProps)}
+                disabled={Utils.hasSideProps('right', part) === false}
+                on:click={() => {
+                  if (Utils.hasSpecificPart(template, part, rightProps)) {
+                    dispatch('clear', Utils.removeParts(template, rightProps));
+                  } else {
+                    dispatch('select', Utils.assign(template, Utils.ignoreParts(part, leftProps)));
+                  }
+                }}>
                 R
               </button>
             </div>

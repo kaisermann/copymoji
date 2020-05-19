@@ -62,3 +62,16 @@ export function format(creation) {
 export function getSideProps(side, props) {
   return props.filter((prop) => prop.startsWith(side));
 }
+
+export function hasSideProps(side, part) {
+  return (
+    getSideProps(side, Object.keys(part)).filter((key) => part[key] != null)
+      .length > 0
+  );
+}
+
+export function hasSpecificPart(creation, part, props) {
+  return props.every(
+    (prop) => part[prop] != null && part[prop] === creation[prop],
+  );
+}

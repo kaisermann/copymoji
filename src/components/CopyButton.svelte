@@ -5,6 +5,8 @@
 
   const dispatch = createEventDispatcher();
 
+  export let content = '';
+
   function handleClick(e) {
     copyToClipboard(e.target.textContent);
     dispatch('copy', e);
@@ -43,6 +45,6 @@
   }
 </style>
 
-<button class="btn copy-btn" on:click={handleClick} title="click to copy">
-  <slot />
+<button class="btn copy-btn" title="click to copy" on:click={handleClick}>
+  <slot {content}>{content}</slot>
 </button>
