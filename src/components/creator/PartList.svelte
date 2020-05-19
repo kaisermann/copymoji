@@ -49,13 +49,13 @@
     opacity: 1;
   }
 
-  .select-button {
+  .select-btn {
     font-size: 1.4rem;
     opacity: 0.6;
     padding: 0.8rem;
   }
 
-  .select-button:hover {
+  .select-btn:hover {
     opacity: 1;
   }
 
@@ -128,7 +128,7 @@
         <li>
           <button
             title="select"
-            class="btn select-button"
+            class="btn select-btn emoji-btn"
             on:click={() => dispatch('select', Utils.assign(template, part))}>
             {Utils.format(Utils.assign(template, part))}
           </button>

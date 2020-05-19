@@ -45,10 +45,14 @@ li {
   border: none;
   background-color: transparent;
   color: inherit;
-  font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial,
-    Helvetica, Verdana, sans-serif;
+  font-family: monospace;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.btn.emoji-btn {
+  font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial,
+    Helvetica, Verdana, sans-serif;
 }
 
 .btn:hover {

@@ -45,6 +45,9 @@
   }
 </style>
 
-<button class="btn copy-btn" title="click to copy" on:click={handleClick}>
+<button
+  class="btn emoji-btn copy-btn"
+  title="click to copy"
+  on:click={handleClick}>
   <slot {content}>{content}</slot>
 </button>
