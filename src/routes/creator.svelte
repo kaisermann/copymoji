@@ -12,55 +12,17 @@
   import accessories from '../parts/accessories.json';
   import CloseIcon from '../components/icons/Close.svelte';
 
-  let currentCreation = {
-    leftOutsideAccessory: null,
-    leftOutsideArm: null,
-    leftFace: null,
-    leftInsideArm: null,
-    leftCheek: null,
-    leftEye: null,
-    mouth: null,
-    nose: null,
-    rightEye: null,
-    rightCheek: null,
-    rightInsideArm: null,
-    rightFace: null,
-    rightOutsideArm: null,
-    rightOutsideAccessory: null,
-    ...arms.parts[0],
-    ...eyes.parts[0],
-    ...heads.parts[0],
-    ...mouthsAndNoses.parts[0],
-  };
+  import * as Utils from '../components/creator/utils.js';
 
-  function removeParts(creation, propList) {
-    const copy = { ...creation };
-    for (const prop of propList) {
-      copy[prop] = null;
-    }
-    return copy;
-  }
+  let creation = Utils.assign(
+    Utils.getEmpty(),
+    arms.list[0],
+    eyes.list[0],
+    heads.list[0],
+    mouthsAndNoses.list[0],
+  );
 
-  function mapCreation(creation, ...parts) {
-    return Object.assign({}, creation, ...parts);
-  }
-
-  function setCurrentCreation(...parts) {
-    currentCreation = mapCreation(currentCreation, ...parts);
-  }
-
-  function formatCreation(creation, ...creationParts) {
-    const parts = Object.entries(mapCreation(creation, ...creationParts)).map(
-      ([, val]) => val || '',
-    );
-    return parts.join('');
-  }
-
-  function getSideProps(side, props) {
-    return props.filter((prop) => prop.startsWith(side));
-  }
-
-  $: formattedCreation = formatCreation(currentCreation);
+  $: formattedCreation = Utils.format(creation);
 </script>
 
 <style>
@@ -105,75 +67,48 @@
       <span class="created-emoji">{formattedCreation}</span>
     </CopyButton>
   </div>
+
   <div class="parts">
     <PartList
       title="heads"
-      items={heads.parts}
-      on:select={(e) => setCurrentCreation(e.detail)}
-      let:item>
-      {formatCreation(mapCreation(currentCreation, item))}
-      <div slot="controls">
-        <ListControls
-          sides
-          on:clear={() => setCurrentCreation(removeParts(currentCreation, heads.props))}
-          on:clear-left={() => setCurrentCreation(removeParts(currentCreation, getSideProps('left', heads.props)))}
-          on:clear-right={() => setCurrentCreation(removeParts(currentCreation, getSideProps('right', heads.props)))} />
-
-      </div>
-    </PartList>
+      parts={heads}
+      template={creation}
+      allowEmpty
+      on:clear={(e) => (creation = e.detail)}
+      on:select={(e) => (creation = e.detail)} />
 
     <PartList
       title="eyes"
-      items={eyes.parts}
-      on:select={(e) => setCurrentCreation(e.detail)}
-      let:item>
-      {formatCreation(mapCreation(currentCreation, item))}
-    </PartList>
+      parts={eyes}
+      sides
+      template={creation}
+      on:select={(e) => (creation = e.detail)} />
 
     <PartList
       title="mouths/noses"
-      items={mouthsAndNoses.parts}
-      on:select={(e) => setCurrentCreation(e.detail)}
-      on:clear={() => setCurrentCreation(removeParts(currentCreation, mouthsAndNoses.props))}
-      let:item>
-      {formatCreation(mapCreation(currentCreation, item))}
-      <div slot="controls">
-        <ListControls
-          on:clear={() => setCurrentCreation(removeParts(currentCreation, mouthsAndNoses.props))} />
-      </div>
-    </PartList>
+      parts={mouthsAndNoses}
+      template={creation}
+      allowEmpty
+      on:clear={(e) => (creation = e.detail)}
+      on:select={(e) => (creation = e.detail)} />
 
     <PartList
       title="arms"
-      items={arms.parts}
-      on:clear={() => setCurrentCreation(removeParts(currentCreation, arms.props))}
-      on:select={(e) => setCurrentCreation(e.detail)}
-      let:item>
-      {formatCreation(mapCreation(currentCreation, item))}
-      <div slot="controls">
-        <ListControls
-          sides
-          on:clear={() => setCurrentCreation(removeParts(currentCreation, arms.props))}
-          on:clear-left={() => setCurrentCreation(removeParts(currentCreation, getSideProps('left', arms.props)))}
-          on:clear-right={() => setCurrentCreation(removeParts(currentCreation, getSideProps('right', arms.props)))} />
-      </div>
-    </PartList>
+      parts={arms}
+      template={creation}
+      allowEmpty
+      sides
+      on:clear={(e) => (creation = e.detail)}
+      on:select={(e) => (creation = e.detail)} />
 
     <PartList
       title="accessories"
-      items={accessories.parts}
-      on:clear={() => setCurrentCreation(removeParts(currentCreation, accessories.props))}
-      on:select={(e) => setCurrentCreation(e.detail)}
-      let:item>
-      {formatCreation(mapCreation(currentCreation, item))}
-      <div slot="controls">
-        <ListControls
-          sides
-          on:clear={() => setCurrentCreation(removeParts(currentCreation, accessories.props))}
-          on:clear-left={() => setCurrentCreation(removeParts(currentCreation, getSideProps('left', accessories.props)))}
-          on:clear-right={() => setCurrentCreation(removeParts(currentCreation, getSideProps('right', accessories.props)))} />
-      </div>
-    </PartList>
+      parts={accessories}
+      template={creation}
+      allowEmpty
+      sides
+      on:clear={(e) => (creation = e.detail)}
+      on:select={(e) => (creation = e.detail)} />
   </div>
 
 </div>

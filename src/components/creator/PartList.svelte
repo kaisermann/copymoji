@@ -1,13 +1,21 @@
 <script>
   import { slide } from 'svelte/transition';
   import { createEventDispatcher } from 'svelte';
+  import * as Utils from './utils.js';
+  import CloseIcon from '../icons/Close.svelte';
 
   const dispatch = createEventDispatcher();
 
   let collapsed = false;
 
   export let title = 'n/a';
-  export let items = [];
+  export let template = null;
+  export let parts = null;
+  export let allowEmpty = false;
+  export let sides = false;
+
+  $: leftProps = Utils.getSideProps('left', parts.props);
+  $: rightProps = Utils.getSideProps('right', parts.props);
 </script>
 
 <style>
@@ -41,6 +49,26 @@
     opacity: 1;
   }
 
+  .select-button {
+    font-size: 1.4rem;
+    opacity: 0.6;
+    padding: 0.8rem;
+  }
+
+  .select-button:hover {
+    opacity: 1;
+  }
+
+  .control-btn {
+    color: white;
+    font-size: 0.8rem;
+    line-height: 0;
+    padding: 0.4rem;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+
   ul {
     margin: 0;
     padding: 1px 1rem 1px 1px;
@@ -48,15 +76,19 @@
     overflow: auto;
   }
 
-  .select-button {
-    font-size: 1.4rem;
-    opacity: 0.6;
-    padding: 0.8rem;
-    width: 100%;
+  li {
+    display: flex;
   }
 
-  .select-button:hover {
-    opacity: 1;
+  li:hover .side-btns {
+    visibility: visible;
+  }
+
+  .side-btns {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
   }
 </style>
 
@@ -65,18 +97,38 @@
     <button class="btn title" on:click={() => (collapsed = !collapsed)}>
       {title}
     </button>
-    <slot name="controls" />
+    {#if allowEmpty}
+      <button
+        class="btn control-btn"
+        on:click={() => dispatch('clear', Utils.removeParts(template, parts.props))}>
+        <CloseIcon />
+      </button>
+    {/if}
   </div>
 
   {#if collapsed === false}
     <ul transition:slide={{ duration: 300 }}>
-      {#each items as item}
+      {#each parts.list as item}
         <li>
           <button
             class="btn select-button"
-            on:click={() => dispatch('select', item)}>
-            <slot {item} />
+            on:click={() => dispatch('select', Utils.assign(template, item))}>
+            {Utils.format(Utils.assign(template, item))}
           </button>
+          {#if sides}
+            <div class="side-btns">
+              <button
+                class="btn control-btn"
+                on:click={() => dispatch('select', Utils.assign(template, Utils.ignoreParts(item, rightProps)))}>
+                L
+              </button>
+              <button
+                class="btn control-btn"
+                on:click={() => dispatch('select', Utils.assign(template, Utils.ignoreParts(item, leftProps)))}>
+                R
+              </button>
+            </div>
+          {/if}
 
         </li>
       {/each}
