@@ -45,7 +45,8 @@
     padding: 0.4rem;
   }
 
-  .title:hover {
+  .title:hover,
+  .title:focus {
     opacity: 1;
   }
 
@@ -90,7 +91,8 @@
     display: flex;
   }
 
-  li:hover .side-btns {
+  li:hover .side-btns,
+  button:focus + .side-btns {
     visibility: visible;
   }
 
@@ -137,10 +139,10 @@
               <button
                 title="only add left side"
                 class="btn control-btn"
-                class:active={Utils.hasSpecificPart(template, part, leftProps)}
+                class:active={Utils.hasSomeSpecificPart(template, part, leftProps)}
                 disabled={Utils.hasSideProps('left', part) === false}
                 on:click={() => {
-                  if (Utils.hasSpecificPart(template, part, leftProps)) {
+                  if (Utils.hasSomeSpecificPart(template, part, leftProps)) {
                     dispatch('clear', Utils.removeParts(template, leftProps));
                   } else {
                     dispatch('select', Utils.assign(template, Utils.ignoreParts(part, rightProps)));
@@ -151,10 +153,10 @@
               <button
                 title="only add right side"
                 class="btn control-btn"
-                class:active={Utils.hasSpecificPart(template, part, rightProps)}
+                class:active={Utils.hasSomeSpecificPart(template, part, rightProps)}
                 disabled={Utils.hasSideProps('right', part) === false}
                 on:click={() => {
-                  if (Utils.hasSpecificPart(template, part, rightProps)) {
+                  if (Utils.hasSomeSpecificPart(template, part, rightProps)) {
                     dispatch('clear', Utils.removeParts(template, rightProps));
                   } else {
                     dispatch('select', Utils.assign(template, Utils.ignoreParts(part, leftProps)));

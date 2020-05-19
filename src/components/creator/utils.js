@@ -70,8 +70,8 @@ export function hasSideProps(side, part) {
   );
 }
 
-export function hasSpecificPart(creation, part, props) {
-  return props.every(
+export function hasSomeSpecificPart(creation, part, props) {
+  return props.some(
     (prop) => part[prop] != null && part[prop] === creation[prop],
   );
 }
