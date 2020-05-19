@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 1px solid white;
+}
+
 html {
   --font-size: 18px;
   --line-height: 1.4;
@@ -32,10 +36,6 @@ li {
   html {
     --font-size: 1.2vw;
   }
-}
-
-*:focus {
-  outline: 1px solid white;
 }
 
 .btn {

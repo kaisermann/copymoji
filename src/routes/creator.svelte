@@ -6,11 +6,11 @@
   import CloseIcon from '../components/icons/Close.svelte';
   import * as Utils from '../components/creator/utils.js';
 
-  import arms from '../parts/arms.json';
-  import eyes from '../parts/eyes.json';
-  import heads from '../parts/heads.json';
-  import mouthsAndNoses from '../parts/mouthsAndNoses.json';
-  import accessories from '../parts/accessories.json';
+  import arms from '../emojis/parts/arms.json';
+  import eyes from '../emojis/parts/eyes.json';
+  import heads from '../emojis/parts/heads.json';
+  import mouthsAndNoses from '../emojis/parts/mouthsAndNoses.json';
+  import accessories from '../emojis/parts/accessories.json';
 
   let creation = Utils.assign(
     Utils.getEmpty(),

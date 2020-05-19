@@ -1,4 +1,4 @@
-import emojiData from '../emojis.json';
+import emojiData from '../emojis/emojis.json';
 
 const emojis = emojiData.map((emoji) => {
   if (typeof emoji === 'string') return emoji;
