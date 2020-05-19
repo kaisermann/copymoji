@@ -80,6 +80,7 @@
       parts={heads}
       template={creation}
       allowEmpty
+      sides
       on:clear={(e) => (creation = e.detail)}
       on:select={(e) => (creation = e.detail)} />
 
