@@ -14,6 +14,10 @@
       "rightFace": "]"
     },
     {
+      "leftFace": "ʕ",
+      "rightFace": "ʔ"
+    },
+    {
       "leftFace": "|",
       "rightFace": "|"
     },
@@ -24,10 +28,6 @@
     {
       "leftFace": "༼",
       "rightFace": "༽"
-    },
-    {
-      "leftFace": "ʕ",
-      "rightFace": "ʔ"
     }
   ]
 }

@@ -31,7 +31,6 @@
     background: none;
     border: none;
     color: white;
-    font-family: monospace;
     text-align: left;
   }
 
