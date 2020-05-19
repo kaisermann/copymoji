@@ -1,7 +1,7 @@
 const partOrder = [
   'leftOutsideAccessory',
   'leftOutsideArm',
-  'leftFace',
+  'leftHead',
   'leftInsideArm',
   'leftCheek',
   'leftEye',
@@ -10,7 +10,7 @@ const partOrder = [
   'rightEye',
   'rightCheek',
   'rightInsideArm',
-  'rightFace',
+  'rightHead',
   'rightOutsideArm',
   'rightOutsideAccessory',
 ];
@@ -19,7 +19,7 @@ export function getEmpty() {
   return {
     leftOutsideAccessory: null,
     leftOutsideArm: null,
-    leftFace: null,
+    leftHead: null,
     leftInsideArm: null,
     leftCheek: null,
     leftEye: null,
@@ -28,7 +28,7 @@ export function getEmpty() {
     rightEye: null,
     rightCheek: null,
     rightInsideArm: null,
-    rightFace: null,
+    rightHead: null,
     rightOutsideArm: null,
     rightOutsideAccessory: null,
   };

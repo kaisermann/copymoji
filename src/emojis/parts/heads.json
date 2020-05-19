@@ -1,33 +1,33 @@
 {
-  "props": ["leftFace", "rightFace"],
+  "props": ["leftHead", "rightHead"],
   "list": [
     {
-      "leftFace": "(",
-      "rightFace": ")"
+      "leftHead": "(",
+      "rightHead": ")"
     },
     {
-      "leftFace": "{",
-      "rightFace": "}"
+      "leftHead": "{",
+      "rightHead": "}"
     },
     {
-      "leftFace": "[",
-      "rightFace": "]"
+      "leftHead": "[",
+      "rightHead": "]"
     },
     {
-      "leftFace": "ʕ",
-      "rightFace": "ʔ"
+      "leftHead": "ʕ",
+      "rightHead": "ʔ"
     },
     {
-      "leftFace": "|",
-      "rightFace": "|"
+      "leftHead": "|",
+      "rightHead": "|"
     },
     {
-      "leftFace": "ᶘ",
-      "rightFace": "ᶅ"
+      "leftHead": "ᶘ",
+      "rightHead": "ᶅ"
     },
     {
-      "leftFace": "༼",
-      "rightFace": "༽"
+      "leftHead": "༼",
+      "rightHead": "༽"
     }
   ]
 }

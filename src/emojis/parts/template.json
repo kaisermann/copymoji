@@ -1,7 +1,7 @@
 {
   "leftOutsideAccessory": null,
   "leftOutsideArm": null,
-  "leftFace": null,
+  "leftHead": null,
   "leftInsideArm": null,
   "leftCheek": null,
   "leftEye": null,
@@ -10,7 +10,7 @@
   "rightEye": null,
   "rightCheek": null,
   "rightInsideArm": null,
-  "rightFace": null,
+  "rightHead": null,
   "rightOutsideArm": null,
   "rightOutsideAccessory": null
 }
