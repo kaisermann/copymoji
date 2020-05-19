@@ -27,7 +27,7 @@
     },
     {
       "leftOutsideAccessory": "♪",
-      "rightOutsideAccessory": null
+      "rightOutsideAccessory": "♪"
     },
     {
       "leftOutsideAccessory": "┬┴┬┴┤",
@@ -64,6 +64,10 @@
     {
       "leftOutsideAccessory": "自",
       "rightOutsideAccessory": "自"
+    },
+    {
+      "leftOutsideAccessory": "˚✧₊⁎",
+      "rightOutsideAccessory": "˚⁎⁺˳✧༚"
     },
     {
       "leftOutsideAccessory": "♡°☆",
