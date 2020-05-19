@@ -2,6 +2,10 @@
   "props": ["leftEye", "rightEye"],
   "list": [
     {
+      "leftEye": "⚆",
+      "rightEye": "⚆"
+    },
+    {
       "leftEye": ".",
       "rightEye": "."
     },
@@ -44,6 +48,10 @@
     {
       "leftEye": "˙",
       "rightEye": "˙"
+    },
+    {
+      "leftEye": "•̀",
+      "rightEye": "•́"
     },
     {
       "leftEye": "˙",

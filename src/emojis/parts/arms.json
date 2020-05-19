@@ -7,6 +7,12 @@
   ],
   "list": [
     {
+      "leftOutsideArm": null,
+      "rightOutsideArm": "ﾉ",
+      "leftInsideArm": "ﾉ",
+      "rightInsideArm": null
+    },
+    {
       "leftOutsideArm": "¯\\_",
       "rightOutsideArm": "_/¯",
       "leftInsideArm": null,
@@ -40,12 +46,6 @@
       "leftOutsideArm": null,
       "rightOutsideArm": "づ",
       "leftInsideArm": "づ",
-      "rightInsideArm": null
-    },
-    {
-      "leftOutsideArm": null,
-      "rightOutsideArm": "ﾉ",
-      "leftInsideArm": "ﾉ",
       "rightInsideArm": null
     },
     {

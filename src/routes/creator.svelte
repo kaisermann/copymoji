@@ -10,6 +10,7 @@
   import eyes from '../emojis/parts/eyes.json';
   import heads from '../emojis/parts/heads.json';
   import mouthsAndNoses from '../emojis/parts/mouthsAndNoses.json';
+  import cheeks from '../emojis/parts/cheeks.json';
   import accessories from '../emojis/parts/accessories.json';
 
   let creation = Utils.assign(
@@ -100,6 +101,15 @@
     <PartList
       title="arms"
       parts={arms}
+      template={creation}
+      allowEmpty
+      sides
+      on:clear={(e) => (creation = e.detail)}
+      on:select={(e) => (creation = e.detail)} />
+
+    <PartList
+      title="cheeks"
+      parts={cheeks}
       template={creation}
       allowEmpty
       sides

@@ -1,0 +1,105 @@
+{
+  "props": ["leftCheek", "rightCheek"],
+  "list": [
+    {
+      "leftCheek": "≧",
+      "rightCheek": "≦"
+    },
+    {
+      "leftCheek": "｡",
+      "rightCheek": "｡"
+    },
+    {
+      "leftCheek": "◍",
+      "rightCheek": "◍"
+    },
+    {
+      "leftCheek": "✿",
+      "rightCheek": "✿"
+    },
+    {
+      "leftCheek": "●",
+      "rightCheek": "●"
+    },
+    {
+      "leftCheek": "❣",
+      "rightCheek": "❣"
+    },
+    {
+      "leftCheek": "‶",
+      "rightCheek": "‶"
+    },
+    {
+      "leftCheek": "ˇ",
+      "rightCheek": "ˇ"
+    },
+    {
+      "leftCheek": "；",
+      "rightCheek": null
+    },
+    {
+      "leftCheek": ";",
+      "rightCheek": ";"
+    },
+    {
+      "leftCheek": "´",
+      "rightCheek": "`"
+    },
+    {
+      "leftCheek": "▰",
+      "rightCheek": "▰"
+    },
+    {
+      "leftCheek": "⑅",
+      "rightCheek": "⑅"
+    },
+    {
+      "leftCheek": "*",
+      "rightCheek": "*"
+    },
+    {
+      "leftCheek": "⁎",
+      "rightCheek": "⁎"
+    },
+    {
+      "leftCheek": "#",
+      "rightCheek": "#"
+    },
+    {
+      "leftCheek": "＃",
+      "rightCheek": "＃"
+    },
+    {
+      "leftCheek": "‡",
+      "rightCheek": "‡"
+    },
+    {
+      "leftCheek": "╬",
+      "rightCheek": "╬"
+    },
+    {
+      "leftCheek": "ꉺ",
+      "rightCheek": "ꉺ"
+    },
+    {
+      "leftCheek": "☆",
+      "rightCheek": "☆"
+    },
+    {
+      "leftCheek": "°",
+      "rightCheek": "°"
+    },
+    {
+      "leftCheek": "♡",
+      "rightCheek": "♡"
+    },
+    {
+      "leftCheek": "＾",
+      "rightCheek": "＾"
+    },
+    {
+      "leftCheek": "ˋ̥̥̥̥̥",
+      "rightCheek": "ˋ̥̥̥̥̥"
+    }
+  ]
+}
