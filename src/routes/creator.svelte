@@ -1,18 +1,17 @@
 <script>
   import CopyButton from '../components/CopyButton.svelte';
-  import emojis from '../emojis.json';
   import EmojiList from '../components/EmojiList.svelte';
   import PartList from '../components/creator/PartList.svelte';
   import ListControls from '../components/creator/ListControls.svelte';
-  import { recently } from '../stores.js';
+  import { recently, getTitle } from '../stores.js';
+  import CloseIcon from '../components/icons/Close.svelte';
+  import * as Utils from '../components/creator/utils.js';
+
   import arms from '../parts/arms.json';
   import eyes from '../parts/eyes.json';
   import heads from '../parts/heads.json';
   import mouthsAndNoses from '../parts/mouthsAndNoses.json';
   import accessories from '../parts/accessories.json';
-  import CloseIcon from '../components/icons/Close.svelte';
-
-  import * as Utils from '../components/creator/utils.js';
 
   let creation = Utils.assign(
     Utils.getEmpty(),
@@ -40,8 +39,6 @@
 
   .parts {
     margin: 4rem 2rem 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     justify-content: center;
   }
@@ -58,7 +55,7 @@
 </style>
 
 <svelte:head>
-  <title>copymoji - creator</title>
+  <title>{$getTitle('creator')}</title>
 </svelte:head>
 
 <div class="wrapper">

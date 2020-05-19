@@ -6,7 +6,7 @@
 
   const dispatch = createEventDispatcher();
 
-  let collapsed = false;
+  let collapsed = true;
 
   export let title = 'n/a';
   export let template = null;
@@ -94,11 +94,16 @@
 
 <div class="wrapper">
   <div class="top">
-    <button class="btn title" on:click={() => (collapsed = !collapsed)}>
+    <button
+      class="btn title"
+      title={`${title} - click to ${collapsed ? 'expand' : 'collapse'}`}
+      aria-expanded={collapsed}
+      on:click={() => (collapsed = !collapsed)}>
       {title}
     </button>
     {#if allowEmpty}
       <button
+        title="remove parts"
         class="btn control-btn"
         on:click={() => dispatch('clear', Utils.removeParts(template, parts.props))}>
         <CloseIcon />
@@ -111,6 +116,7 @@
       {#each parts.list as item}
         <li>
           <button
+            title="select"
             class="btn select-button"
             on:click={() => dispatch('select', Utils.assign(template, item))}>
             {Utils.format(Utils.assign(template, item))}
@@ -118,11 +124,13 @@
           {#if sides}
             <div class="side-btns">
               <button
+                title="only add left side"
                 class="btn control-btn"
                 on:click={() => dispatch('select', Utils.assign(template, Utils.ignoreParts(item, rightProps)))}>
                 L
               </button>
               <button
+                title="only add right side"
                 class="btn control-btn"
                 on:click={() => dispatch('select', Utils.assign(template, Utils.ignoreParts(item, leftProps)))}>
                 R

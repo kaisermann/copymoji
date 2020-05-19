@@ -1,17 +1,25 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 
-const is_browser = typeof window !== 'undefined';
+import { getRandomListedEmoji } from './modules/emojis.js';
 
-export let recently = writable(
-  is_browser ? JSON.parse(localStorage.getItem('recently')) || [] : [],
+const isBrowser = typeof window !== 'undefined';
+
+export const recently = writable(
+  isBrowser ? JSON.parse(localStorage.getItem('recently')) || [] : [],
 );
 
-if (is_browser) {
-  recently.subscribe(value => {
+if (isBrowser) {
+  recently.subscribe((value) => {
     localStorage.setItem('recently', JSON.stringify(value));
   });
 }
 
+export const searchQuery = writable('');
+export const searchElement = writable('');
 
-export let searchQuery = writable('')
-export let searchElement = writable('')
+export const titleEmoji = writable(getRandomListedEmoji().emoji);
+setInterval(() => titleEmoji.set(getRandomListedEmoji().emoji), 4000);
+
+export const getTitle = derived(titleEmoji, ($emoji) => (title) =>
+  `${$emoji} - ${title}`,
+);

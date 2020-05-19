@@ -43,6 +43,6 @@
   }
 </style>
 
-<button class="btn copy-btn" on:click={handleClick}>
+<button class="btn copy-btn" on:click={handleClick} title="click to copy">
   <slot />
 </button>
