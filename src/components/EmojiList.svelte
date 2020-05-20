@@ -46,6 +46,10 @@
           return false;
         }
 
+        if (emoji.tags == null) {
+          return false;
+        }
+
         return terms.every((term) =>
           emoji.tags.some(
             (tag) => tag && (tag.includes(term) || term.includes(tag)),
@@ -116,7 +120,7 @@
 <!-- <p>{start}-{end}/{filteredEmojis.length} emojis</p> -->
 <div class="wrapper">
   <VirtualList items={filteredEmojis} let:item={emoji} bind:start bind:end>
-    <div class="item" data-tags={emoji.tags.join(', ')}>
+    <div class="item" data-tags={emoji.tags ? emoji.tags.join(', ') : ''}>
       <CopyButton content={emoji.emoji} on:copy={() => handleCopy(emoji)} />
     </div>
   </VirtualList>

@@ -22,6 +22,11 @@
   );
 
   $: formattedCreation = Utils.format(creation);
+
+  function handleCopy(e) {
+    const emoji = e.detail.target.textContent;
+    $recently = [{ emoji }, ...$recently.filter((e) => e.emoji !== emoji)];
+  }
 </script>
 
 <style>
@@ -68,7 +73,7 @@
 <div class="wrapper">
   <div class="creation-section">
     <div class="creation">
-      <CopyButton content={formattedCreation} let:content>
+      <CopyButton content={formattedCreation} let:content on:copy={handleCopy}>
         <span class="created-emoji">{content}</span>
       </CopyButton>
     </div>
