@@ -1,3 +1,15 @@
 [build]
   publish = "__sapper__/export/"
   command = "npm run export"
+
+[[redirects]]
+  from = "http://copymoji.kaisermann.me"
+  to = "https://copymoji.kaisermann.me"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://copymoji.netlify.app"
+  to = "https://copymoji.kaisermann.me"
+  status = 301
+  force = true
