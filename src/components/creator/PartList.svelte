@@ -33,39 +33,41 @@
   }
 
   function handleShuffle() {
+    // const hasLeft = Utils.hasSideParts('left', template)
+    // const hasRight = Utils.hasSideParts('right', template)
+    // const hasSides = hasLeft && hasRight
+
     let possibilities = [
       'select-both',
       sides && 'select-left',
       sides && 'select-right',
-      allowEmpty && sides && 'clear-left',
-      allowEmpty && sides && 'clear-right',
     ].filter(Boolean)
 
-    const action = getRandomItem(possibilities)
+    const observation = getRandomItem(possibilities)
 
-    if (action === 'clear-both') {
+    if (observation === 'clear-both') {
       return clear(parts.props)
     }
 
-    if (action === 'clear-left') {
+    if (observation === 'clear-left') {
       return clear(leftProps)
     }
 
-    if (action === 'cleat-right') {
+    if (observation === 'cleat-right') {
       return clear(rightProps)
     }
 
     const randomPart = getRandomItem(parts.list)
 
-    if (action === 'select-both') {
+    if (observation === 'select-both') {
       return select(randomPart)
     }
 
-    if (action === 'select-left') {
+    if (observation === 'select-left') {
       return select(Utils.ignoreParts(randomPart, rightProps))
     }
 
-    if (action === 'select-right') {
+    if (observation === 'select-right') {
       return select(Utils.ignoreParts(randomPart, leftProps))
     }
   }
