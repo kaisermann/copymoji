@@ -63,7 +63,7 @@ export function getSideProps(side, props) {
   return props.filter((prop) => prop.startsWith(side));
 }
 
-export function hasSideProps(side, part) {
+export function hasSideParts(side, part) {
   return (
     getSideProps(side, Object.keys(part)).filter((key) => part[key] != null)
       .length > 0
