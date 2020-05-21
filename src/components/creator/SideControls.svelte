@@ -28,7 +28,7 @@
     title="only add left side"
     class="btn control-btn"
     class:active={Utils.hasSpecificPart(template, part, leftProps)}
-    disabled={Utils.hasSideProps('left', part) === false}
+    disabled={Utils.hasSideParts('left', part) === false}
     on:click={() => {
       if (Utils.hasSpecificPart(template, part, leftProps)) {
         dispatch('clear', Utils.removeParts(template, leftProps));
@@ -42,7 +42,7 @@
     title="only add right side"
     class="btn control-btn"
     class:active={Utils.hasSpecificPart(template, part, rightProps)}
-    disabled={Utils.hasSideProps('right', part) === false}
+    disabled={Utils.hasSideParts('right', part) === false}
     on:click={() => {
       if (Utils.hasSpecificPart(template, part, rightProps)) {
         dispatch('clear', Utils.removeParts(template, rightProps));

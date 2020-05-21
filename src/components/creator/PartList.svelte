@@ -1,21 +1,74 @@
 <script>
-  import { slide } from 'svelte/transition';
-  import { createEventDispatcher } from 'svelte';
-  import * as Utils from './utils.js';
-  import CloseIcon from '../icons/Close.svelte';
+  import VirtualList from '@sveltejs/svelte-virtual-list'
+  import { slide } from 'svelte/transition'
+  import { createEventDispatcher } from 'svelte'
+  import * as Utils from './utils.js'
+  import { getRandomItem } from '../../modules/random'
+  import CloseIcon from '../icons/Close.svelte'
+  import ShuffleIcon from '../icons/Shuffle.svelte'
 
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher()
 
-  let collapsed = true;
+  let collapsed = true
 
-  export let title = 'n/a';
-  export let template = null;
-  export let parts = null;
-  export let allowEmpty = false;
-  export let sides = false;
+  export let title = 'n/a'
+  export let template = null
+  export let parts = null
+  export let allowEmpty = false
+  export let sides = false
 
-  $: leftProps = Utils.getSideProps('left', parts.props);
-  $: rightProps = Utils.getSideProps('right', parts.props);
+  $: leftProps = Utils.getSideProps('left', parts.props)
+  $: rightProps = Utils.getSideProps('right', parts.props)
+
+  function getRandom(size) {
+    Math.floor(Math.random() * possibilities.length)
+  }
+
+  function select(part) {
+    dispatch('select', Utils.assign(template, Utils.assign(template, part)))
+  }
+
+  function clear(partProps) {
+    dispatch('clear', Utils.removeParts(template, partProps))
+  }
+
+  function handleShuffle() {
+    let possibilities = [
+      'select-both',
+      sides && 'select-left',
+      sides && 'select-right',
+      allowEmpty && sides && 'clear-left',
+      allowEmpty && sides && 'clear-right',
+    ].filter(Boolean)
+
+    const action = getRandomItem(possibilities)
+
+    if (action === 'clear-both') {
+      return clear(parts.props)
+    }
+
+    if (action === 'clear-left') {
+      return clear(leftProps)
+    }
+
+    if (action === 'cleat-right') {
+      return clear(rightProps)
+    }
+
+    const randomPart = getRandomItem(parts.list)
+
+    if (action === 'select-both') {
+      return select(randomPart)
+    }
+
+    if (action === 'select-left') {
+      return select(Utils.ignoreParts(randomPart, rightProps))
+    }
+
+    if (action === 'select-right') {
+      return select(Utils.ignoreParts(randomPart, leftProps))
+    }
+  }
 </script>
 
 <style>
@@ -79,18 +132,18 @@
     opacity: 0.2;
   }
 
-  ul {
+  .list {
     margin: 0;
     padding: 1px 1rem 1px 1px;
-    max-height: 27rem;
     overflow: auto;
   }
 
-  li {
+  .item {
     display: flex;
+    padding: 1px;
   }
 
-  li:hover .side-btns,
+  .item:hover .side-btns,
   button:focus + .side-btns {
     visibility: visible;
   }
@@ -107,29 +160,35 @@
   <div class="top">
     <button
       class="btn title"
-      title={`${title} - click to ${collapsed ? 'expand' : 'collapse'}`}
-      aria-expanded={collapsed}
-      on:click={() => (collapsed = !collapsed)}>
+      title="{`${title} - click to ${collapsed ? 'expand' : 'collapse'}`}"
+      aria-expanded="{collapsed}"
+      on:click="{() => (collapsed = !collapsed)}"
+    >
       {title}
     </button>
     {#if allowEmpty}
       <button
         title="remove parts"
         class="btn control-btn"
-        on:click={() => dispatch('clear', Utils.removeParts(template, parts.props))}>
+        on:click="{() => clear(parts.props)}"
+      >
         <CloseIcon />
       </button>
     {/if}
+    <button title="shuffle" class="btn control-btn" on:click="{handleShuffle}">
+      <ShuffleIcon />
+    </button>
   </div>
 
   {#if collapsed === false}
-    <ul transition:slide={{ duration: 300 }}>
-      {#each parts.list as part}
-        <li>
+    <div class="list" transition:slide="{{ duration: 300 }}">
+      <VirtualList height="27rem" items="{parts.list}" let:item="{part}">
+        <div class="item">
           <button
             title="select"
             class="btn select-btn emoji-btn"
-            on:click={() => dispatch('select', Utils.assign(template, part))}>
+            on:click="{() => select(part)}"
+          >
             {Utils.format(Utils.assign(template, part))}
           </button>
 
@@ -138,36 +197,38 @@
               <button
                 title="only add left side"
                 class="btn control-btn"
-                class:active={Utils.hasSomeSpecificPart(template, part, leftProps)}
-                disabled={Utils.hasSideProps('left', part) === false}
-                on:click={() => {
+                class:active="{Utils.hasSomeSpecificPart(template, part, leftProps)}"
+                disabled="{Utils.hasSideParts('left', part) === false}"
+                on:click="{() => {
                   if (Utils.hasSomeSpecificPart(template, part, leftProps)) {
-                    dispatch('clear', Utils.removeParts(template, leftProps));
+                    clear(leftProps)
                   } else {
-                    dispatch('select', Utils.assign(template, Utils.ignoreParts(part, rightProps)));
+                    select(Utils.ignoreParts(part, rightProps))
                   }
-                }}>
+                }}"
+              >
                 L
               </button>
               <button
                 title="only add right side"
                 class="btn control-btn"
-                class:active={Utils.hasSomeSpecificPart(template, part, rightProps)}
-                disabled={Utils.hasSideProps('right', part) === false}
-                on:click={() => {
+                class:active="{Utils.hasSomeSpecificPart(template, part, rightProps)}"
+                disabled="{Utils.hasSideParts('right', part) === false}"
+                on:click="{() => {
                   if (Utils.hasSomeSpecificPart(template, part, rightProps)) {
-                    dispatch('clear', Utils.removeParts(template, rightProps));
+                    clear(rightProps)
                   } else {
-                    dispatch('select', Utils.assign(template, Utils.ignoreParts(part, leftProps)));
+                    select(Utils.ignoreParts(part, leftProps))
                   }
-                }}>
+                }}"
+              >
                 R
               </button>
             </div>
           {/if}
 
-        </li>
-      {/each}
-    </ul>
+        </div>
+      </VirtualList>
+    </div>
   {/if}
 </div>

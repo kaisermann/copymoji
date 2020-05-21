@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-kaisermann/svelte",
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/first": "off",
+  }
+}
