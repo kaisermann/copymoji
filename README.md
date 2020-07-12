@@ -1,3 +1,3 @@
 # copymoji
 
-https://copymoji.netlify.app
+https://copymoji.kaisermann.me
